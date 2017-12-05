@@ -210,6 +210,16 @@ public class MainFrame {
 						resultedString = Double.toString(resulted);
 					}
 
+					
+					//public double square(double number);
+					//public double cube(double number);
+					//public double pi(double number);
+					//public double sqrt(double number);
+					
+					//public double percentage(double number,double percentageNumber);
+					//public double raisedToThePowerOf(double base, double exponent);
+					
+					
 				}
 
 				textField.setText(resultedString);
@@ -257,5 +267,33 @@ public class MainFrame {
 		});
 		button_addition.setBounds(188, 221, 52, 25);
 		frame.getContentPane().add(button_addition);
+		
+		JButton Button_square = new JButton("x²");
+		Button_square.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		Button_square.setBounds(26, 53, 52, 25);
+		frame.getContentPane().add(Button_square);
+		
+		JButton Button_cube = new JButton("x³");
+		Button_cube.setBounds(80, 53, 52, 25);
+		frame.getContentPane().add(Button_cube);
+		
+		JButton Button_percentage = new JButton("%");
+		Button_percentage.setBounds(252, 108, 62, 25);
+		frame.getContentPane().add(Button_percentage);
+		
+		JButton Button_pi = new JButton(" π ");
+		Button_pi.setBounds(134, 53, 52, 25);
+		frame.getContentPane().add(Button_pi);
+		
+		JButton Button_sqrt = new JButton("√");
+		Button_sqrt.setBounds(188, 53, 52, 25);
+		frame.getContentPane().add(Button_sqrt);
+		
+		JButton Button_xy = new JButton("X^Y");
+		Button_xy.setBounds(252, 147, 62, 25);
+		frame.getContentPane().add(Button_xy);
 	}
 }
