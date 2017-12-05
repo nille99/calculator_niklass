@@ -177,7 +177,6 @@ public class MainFrame {
 				String resultedString = "Error";
 				StringTokenizer st = new StringTokenizer(r, " ");
 				double dblNum1 = 0;
-				;
 				double dblNum3 = 0;
 				String dblObr = "";
 				double resulted = 0;
@@ -209,17 +208,15 @@ public class MainFrame {
 						resulted = cbo.division(dblNum1, dblNum3);
 						resultedString = Double.toString(resulted);
 					}
-
-					
-					//public double square(double number);
-					//public double cube(double number);
-					//public double pi(double number);
-					//public double sqrt(double number);
-					
-					//public double percentage(double number,double percentageNumber);
-					//public double raisedToThePowerOf(double base, double exponent);
-					
-					
+					else if(dblObr.equalsIgnoreCase("%")) {
+						resulted = cao.percentage(dblNum1, dblNum3);
+						resultedString = Double.toString(resulted);
+					}
+					else if(dblObr.equalsIgnoreCase("X^Y")) {
+						resulted = cao.raisedToThePowerOf(dblNum1, dblNum3);
+						resultedString = Double.toString(resulted);
+					}
+	
 				}
 
 				textField.setText(resultedString);
@@ -268,32 +265,83 @@ public class MainFrame {
 		button_addition.setBounds(188, 221, 52, 25);
 		frame.getContentPane().add(button_addition);
 		
+		JButton Button_percentage = new JButton("%");
+		Button_percentage.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String r = textField.getText();
+				textField.setText(r + " % ");
+			}
+		});
+		JButton Button_xy = new JButton("X^Y");
+		Button_xy.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String r = textField.getText();
+				textField.setText(r + " X^Y ");
+			}
+		});
+		Button_xy.setBounds(252, 147, 62, 25);
+		frame.getContentPane().add(Button_xy);
+		
+		Button_percentage.setBounds(252, 108, 62, 25);
+		frame.getContentPane().add(Button_percentage);
+		
 		JButton Button_square = new JButton("x²");
 		Button_square.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
+			public void actionPerformed(ActionEvent e) {			
+				String dblNum = textField.getText();	
+				double resulted = cao.square(Double.parseDouble(dblNum));
+				String resultedString = Double.toString(resulted);
+				textField.setText(resultedString);
 			}
 		});
 		Button_square.setBounds(26, 53, 52, 25);
 		frame.getContentPane().add(Button_square);
 		
 		JButton Button_cube = new JButton("x³");
+		Button_cube.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String dblNum = textField.getText();	
+				double resulted = cao.cube(Double.parseDouble(dblNum));
+				String resultedString = Double.toString(resulted);
+				textField.setText(resultedString);
+			}
+		});		
 		Button_cube.setBounds(80, 53, 52, 25);
 		frame.getContentPane().add(Button_cube);
 		
-		JButton Button_percentage = new JButton("%");
-		Button_percentage.setBounds(252, 108, 62, 25);
-		frame.getContentPane().add(Button_percentage);
-		
 		JButton Button_pi = new JButton(" π ");
+		Button_pi.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String dblNum = textField.getText();	
+				double resulted = cao.pi(Double.parseDouble(dblNum));
+				String resultedString = Double.toString(resulted);
+				textField.setText(resultedString);
+			}
+		});
 		Button_pi.setBounds(134, 53, 52, 25);
 		frame.getContentPane().add(Button_pi);
 		
 		JButton Button_sqrt = new JButton("√");
+		Button_sqrt.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String dblNum = textField.getText();	
+				double resulted = cao.sqrt(Double.parseDouble(dblNum));
+				String resultedString = Double.toString(resulted);
+				textField.setText(resultedString);
+			}
+		});
 		Button_sqrt.setBounds(188, 53, 52, 25);
 		frame.getContentPane().add(Button_sqrt);
 		
-		JButton Button_xy = new JButton("X^Y");
-		Button_xy.setBounds(252, 147, 62, 25);
-		frame.getContentPane().add(Button_xy);
+		JButton Button_clean = new JButton("C");
+		Button_clean.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				textField.setText("");
+			}
+		});
+		Button_clean.setBounds(252, 221, 117, 25);
+		frame.getContentPane().add(Button_clean);
+		
+
 	}
 }
