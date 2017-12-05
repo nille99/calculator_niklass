@@ -176,14 +176,40 @@ public class MainFrame {
 				String r = textField.getText();
 				String resultedString = "Error";
 				StringTokenizer st = new StringTokenizer(r, " ");
+				double dblNum1 = 0;
+				;
+				double dblNum3 = 0;
+				String dblObr = "";
+				double resulted = 0;
 
-				double dblNum1 = Double.parseDouble(st.nextToken().trim());
-				String dblObr = st.nextToken().trim();
-				double dblNum3 = Double.parseDouble(st.nextToken().trim());
-				
-				if (dblObr.equalsIgnoreCase("+")){
-					double resulted = cbo.addition(dblNum1, dblNum3);
-					resultedString = Double.toString(resulted);
+				while (st.hasMoreTokens()) {
+
+					if (resulted == 0) {
+						dblNum1 = Double.parseDouble(st.nextToken().trim());
+					} else {
+						dblNum1 = resulted;
+					}
+
+					dblObr = st.nextToken().trim();
+					dblNum3 = Double.parseDouble(st.nextToken().trim());
+
+					if (dblObr.equalsIgnoreCase("+")) {
+						resulted = cbo.addition(dblNum1, dblNum3);
+						resultedString = Double.toString(resulted);
+					}
+					else if(dblObr.equalsIgnoreCase("-")) {
+						resulted = cbo.subtraction(dblNum1, dblNum3);
+						resultedString = Double.toString(resulted);
+					}
+					else if(dblObr.equalsIgnoreCase("x")) {
+						resulted = cbo.multiplication(dblNum1, dblNum3);
+						resultedString = Double.toString(resulted);
+					}
+					else if(dblObr.equalsIgnoreCase("÷")) {
+						resulted = cbo.division(dblNum1, dblNum3);
+						resultedString = Double.toString(resulted);
+					}
+
 				}
 
 				textField.setText(resultedString);
