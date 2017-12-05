@@ -59,7 +59,7 @@ public class MainFrame {
 				textField.setText(r + "1");
 			}
 		});
-		button_1.setBounds(26, 184, 42, 25);
+		button_1.setBounds(26, 184, 52, 25);
 		frame.getContentPane().add(button_1);
 		
 		JButton button_2 = new JButton("2");
@@ -69,7 +69,7 @@ public class MainFrame {
 				textField.setText(r + "2");
 			}
 		});
-		button_2.setBounds(80, 184, 42, 25);
+		button_2.setBounds(80, 184, 52, 25);
 		frame.getContentPane().add(button_2);
 		
 		JButton button_3 = new JButton("3");
@@ -79,7 +79,7 @@ public class MainFrame {
 				textField.setText(r + "3");
 			}
 		});
-		button_3.setBounds(134, 184, 42, 25);
+		button_3.setBounds(134, 184, 52, 25);
 		frame.getContentPane().add(button_3);
 		
 		JButton button_4 = new JButton("4");
@@ -89,7 +89,7 @@ public class MainFrame {
 				textField.setText(r + "4");
 			}
 		});
-		button_4.setBounds(26, 147, 42, 25);
+		button_4.setBounds(26, 147, 52, 25);
 		frame.getContentPane().add(button_4);
 		
 		JButton button_5 = new JButton("5");
@@ -99,7 +99,7 @@ public class MainFrame {
 				textField.setText(r + "6");
 			}
 		});
-		button_5.setBounds(80, 147, 42, 25);
+		button_5.setBounds(80, 147, 52, 25);
 		frame.getContentPane().add(button_5);
 		
 		JButton button_6 = new JButton("6");
@@ -109,7 +109,7 @@ public class MainFrame {
 				textField.setText(r + "6");
 			}
 		});
-		button_6.setBounds(134, 147, 42, 25);
+		button_6.setBounds(134, 147, 52, 25);
 		frame.getContentPane().add(button_6);
 		
 		JButton button_0 = new JButton("0");
@@ -119,7 +119,7 @@ public class MainFrame {
 				textField.setText(r + "0");
 			}
 		});
-		button_0.setBounds(26, 222, 42, 25);
+		button_0.setBounds(26, 221, 52, 25);
 		frame.getContentPane().add(button_0);
 		
 		JButton button_7 = new JButton("7");
@@ -129,7 +129,7 @@ public class MainFrame {
 				textField.setText(r + "7");
 			}
 		});
-		button_7.setBounds(26, 108, 42, 25);
+		button_7.setBounds(26, 108, 52, 25);
 		frame.getContentPane().add(button_7);
 		
 		JButton button_8 = new JButton("8");
@@ -139,7 +139,7 @@ public class MainFrame {
 				textField.setText(r + "8");
 			}
 		});
-		button_8.setBounds(80, 108, 42, 25);
+		button_8.setBounds(80, 108, 52, 25);
 		frame.getContentPane().add(button_8);
 		
 		JButton button_9 = new JButton("9");
@@ -149,7 +149,67 @@ public class MainFrame {
 				textField.setText(r + "9");
 			}
 		});
-		button_9.setBounds(134, 108, 42, 25);
+		button_9.setBounds(134, 108, 52, 25);
 		frame.getContentPane().add(button_9);
+		
+		JButton button_come = new JButton(".");
+		button_come.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String r = textField.getText();	
+				textField.setText(r + ".");
+			}
+		});		
+		button_come.setBounds(80, 221, 52, 25);
+		frame.getContentPane().add(button_come);
+		
+		JButton button_amount = new JButton("=");
+		button_amount.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String r = textField.getText();	
+				textField.setText(r + "=");
+			}
+		});		
+		button_amount.setBounds(134, 221, 52, 25);
+		frame.getContentPane().add(button_amount);
+		
+		JButton Button_division = new JButton("÷");
+		Button_division.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String r = textField.getText();	
+				textField.setText(r + " ÷ ");
+			}
+		});
+		Button_division.setBounds(188, 108, 52, 25);
+		frame.getContentPane().add(Button_division);
+		
+		JButton Button_multiplication = new JButton("x");
+		Button_multiplication.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String r = textField.getText();	
+				textField.setText(r + " x ");
+			}
+		});
+		Button_multiplication.setBounds(188, 147, 52, 25);
+		frame.getContentPane().add(Button_multiplication);
+		
+		JButton button_subtraction = new JButton("-");
+		button_subtraction.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String r = textField.getText();	
+				textField.setText(r + " - ");
+			}
+		});
+		button_subtraction.setBounds(188, 184, 52, 25);
+		frame.getContentPane().add(button_subtraction);
+		
+		JButton button_addition = new JButton("+");
+		button_addition.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String r = textField.getText();	
+				textField.setText(r + " + ");
+			}
+		});
+		button_addition.setBounds(188, 221, 52, 25);
+		frame.getContentPane().add(button_addition);
 	}
 }
