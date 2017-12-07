@@ -10,9 +10,9 @@ public class CalculatorAdvancedOperations implements CalculatorAdvancedOperation
 	    return (number*number*number);
 	}
 	
-	public double percentage(double number, double percentageNumber){
-		double result = number/percentageNumber;
-		return (result * 100);
+	public double percentage(double percentageNumber, double number ){
+		double result = number*(percentageNumber/100);
+		return result;
 
 	}
 	public double pi(double number){
