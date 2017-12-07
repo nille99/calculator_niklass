@@ -11,6 +11,7 @@ import java.awt.event.ActionListener;
 
 import java.util.StringTokenizer;
 import java.awt.event.ActionEvent;
+import javax.swing.JLabel;
 
 public class MainFrame {
 
@@ -44,9 +45,17 @@ public class MainFrame {
 	private JButton Button_multiplication = new JButton("x");
 	private JButton button_subtraction = new JButton("-");
 	private JButton button_addition = new JButton("+");
-	
+	private JLabel label_calculation = new JLabel("");
 	CalculatorBasicOperations cbo = new CalculatorBasicOperations();
 	CalculatorAdvancedOperations cao = new CalculatorAdvancedOperations();
+
+	private String text_input = "";
+	private String resultedString = "Error";
+	private double dblNum1 = 0;
+	private double dblNum3 = 0;
+	private String dblObr = "";
+	private double resulted = 0;
+
 
 	/**
 	 * Create the application.
@@ -63,86 +72,86 @@ public class MainFrame {
 	private void initialize() {
 		//properties for frame
 		frame.setTitle("Calculator");
-		frame.setBounds(100, 100, 450, 300);
+		frame.setBounds(100, 100, 352, 363);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.getContentPane().setLayout(null);
 
 		//set to main
 		frame.setVisible(true);
 
+		
+		//set to main
+				frame.setVisible(true);		
+				
 		//properties for label
-
-
+			label_calculation.setBounds(29, 24, 300, 15);
 		//properties for textField
-		textField.setBounds(12, 12, 406, 29);	
-		textField.setColumns(10);
-		
+			textField.setBounds(26, 51, 300, 29);
+			textField.setColumns(10);	
+						
 		//properties for button
-		button_0.setBounds(26, 221, 52, 25);
-		button_1.setBounds(26, 184, 52, 25);
-		button_2.setBounds(80, 184, 52, 25);
-		button_3.setBounds(134, 184, 52, 25);
-		button_4.setBounds(26, 147, 52, 25);
-		button_5.setBounds(80, 147, 52, 25);
-		button_6.setBounds(134, 147, 52, 25);
-		button_7.setBounds(26, 108, 52, 25);
-		button_8.setBounds(80, 108, 52, 25);
-		button_9.setBounds(134, 108, 52, 25);
-	
-		button_come.setBounds(80, 221, 52, 25);
-		Button_clean.setBounds(252, 221, 117, 25);
-		Button_sqrt.setBounds(188, 53, 52, 25);
-		Button_pi.setBounds(134, 53, 52, 25);
-		Button_cube.setBounds(80, 53, 52, 25);
-		Button_square.setBounds(26, 53, 52, 25);
-		Button_xy.setBounds(252, 147, 62, 25);
-		Button_percentage.setBounds(252, 108, 62, 25);
-		button_addition.setBounds(188, 221, 52, 25);
-		button_subtraction.setBounds(188, 184, 52, 25);
-		Button_multiplication.setBounds(188, 147, 52, 25);
-		Button_division.setBounds(188, 108, 52, 25);
-		button_equal.setBounds(134, 221, 52, 25);
+			button_0.setBounds(26, 271, 52, 25);
+			button_1.setBounds(26, 234, 52, 25);
+			button_2.setBounds(80, 234, 52, 25);		
+			button_3.setBounds(134, 234, 52, 25);			
+			button_4.setBounds(26, 197, 52, 25);
+			button_5.setBounds(80, 197, 52, 25);			
+			button_6.setBounds(134, 197, 52, 25);
+			button_7.setBounds(26, 158, 52, 25);
+			button_8.setBounds(80, 158, 52, 25);			
+			button_9.setBounds(134, 158, 52, 25);
+			button_come.setBounds(80, 271, 52, 25);
+			Button_clean.setBounds(252, 271, 62, 25);			
+			Button_sqrt.setBounds(188, 103, 52, 25);
+			Button_pi.setBounds(134, 103, 52, 25);
+			Button_cube.setBounds(80, 103, 52, 25);
+			Button_square.setBounds(26, 103, 52, 25);
+			Button_xy.setBounds(252, 197, 62, 25);
+			Button_percentage.setBounds(252, 158, 62, 25);
+			button_addition.setBounds(188, 271, 52, 25);
+			button_subtraction.setBounds(188, 234, 52, 25);
+			Button_multiplication.setBounds(188, 197, 52, 25);
+			Button_division.setBounds(188, 158, 52, 25);
+			button_equal.setBounds(134, 271, 52, 25);
+						
 			
-		
+			
 	}
 	public void addComponetsToFrame() {
+		frame.getContentPane().setLayout(null);
 		frame.getContentPane().add(textField);
-		frame.getContentPane().add(button_0);	
-		frame.getContentPane().add(button_1);		
+		frame.getContentPane().add(button_0);
+		frame.getContentPane().add(button_1);
 		frame.getContentPane().add(button_2);
 		frame.getContentPane().add(button_3);
-		frame.getContentPane().add(button_4);		
-		frame.getContentPane().add(button_5);		
-		frame.getContentPane().add(button_6);	
+		frame.getContentPane().add(button_4);
+		frame.getContentPane().add(button_5);
+		frame.getContentPane().add(button_6);
 		frame.getContentPane().add(button_7);
 		frame.getContentPane().add(button_8);
 		frame.getContentPane().add(button_9);
-		
-		frame.getContentPane().add(button_come);	
+		frame.getContentPane().add(button_come);
 		frame.getContentPane().add(Button_clean);
 		frame.getContentPane().add(Button_sqrt);
 		frame.getContentPane().add(Button_pi);
 		frame.getContentPane().add(Button_cube);
 		frame.getContentPane().add(Button_square);
-		frame.getContentPane().add(Button_xy);		
+		frame.getContentPane().add(Button_xy);
 		frame.getContentPane().add(Button_percentage);
 		frame.getContentPane().add(button_addition);
 		frame.getContentPane().add(button_subtraction);
 		frame.getContentPane().add(Button_multiplication);
 		frame.getContentPane().add(Button_division);
 		frame.getContentPane().add(button_equal);
+		frame.getContentPane().add(label_calculation);
 	}
 	
 	public void addActionListeners(){
 		button_equal.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				String r = textField.getText();
-				String resultedString = "Error";
-				StringTokenizer st = new StringTokenizer(r, " ");
-				double dblNum1 = 0;
-				double dblNum3 = 0;
-				String dblObr = "";
-				double resulted = 0;
+				 text_input = textField.getText();
+	
+				StringTokenizer st = new StringTokenizer(text_input, " ");
+	
 
 				while (st.hasMoreTokens()) {
 
@@ -181,163 +190,170 @@ public class MainFrame {
 					}
 	
 				}
-
+				label_calculation.setText(text_input + " = " + resultedString);
 				textField.setText(resultedString);
 			}
-		});
+});
+		
+		
+
 		button_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				String r = textField.getText();
-				textField.setText(r + "1");
+				text_input = textField.getText();
+				textField.setText(text_input + "1");
 			}
 		});
 		
 		button_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				String r = textField.getText();
-				textField.setText(r + "2");
+				text_input = textField.getText();
+				textField.setText(text_input + "2");
 			}
 		});
 
 		button_3.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				String r = textField.getText();
-				textField.setText(r + "3");
+			public void actionPerformed(ActionEvent e) {;
+				text_input = textField.getText();
+				textField.setText(text_input + "3");
 			}
 		});
 
 		button_4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				String r = textField.getText();
-				textField.setText(r + "4");
+				text_input = textField.getText();
+				textField.setText(text_input + "4");
 			}
 		});
 
 		button_5.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				String r = textField.getText();
-				textField.setText(r + "5");
+				text_input = textField.getText();
+				textField.setText(text_input + "5");
 			}
 		});
 	
 		button_6.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				String r = textField.getText();
-				textField.setText(r + "6");
+				text_input = textField.getText();
+				textField.setText(text_input + "6");
 			}
 		});
 		
 		button_0.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				String r = textField.getText();
-				textField.setText(r + "0");
+				text_input = textField.getText();
+				textField.setText(text_input + "0");
 			}
 		});
 		
 		button_7.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				String r = textField.getText();
-				textField.setText(r + "7");
+				text_input = textField.getText();
+				textField.setText(text_input + "7");
 			}
 		});
 		
 		button_8.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				String r = textField.getText();
-				textField.setText(r + "8");
+				text_input = textField.getText();
+				textField.setText(text_input + "8");
 			}
 		});
 		
 		button_9.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				String r = textField.getText();
-				textField.setText(r + "9");
+				text_input = textField.getText();
+				textField.setText(text_input + "9");
 			}
 		});
 		
 		button_come.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				String r = textField.getText();
-				textField.setText(r + ".");
+				text_input = textField.getText();
+				textField.setText(text_input + ".");
 			}
 		});
 
 		Button_division.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				String r = textField.getText();
-				textField.setText(r + " ÷ ");
+				text_input = textField.getText();
+				textField.setText(text_input + " ÷ ");
 			}
 		});
 		
 		Button_multiplication.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				String r = textField.getText();
-				textField.setText(r + " x ");
+				text_input = textField.getText();
+				textField.setText(text_input + " x ");
 			}
 		});
 
 		
 		button_subtraction.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				String r = textField.getText();
-				textField.setText(r + " - ");
+				text_input = textField.getText();
+				textField.setText(text_input + " - ");
 			}
 		});
 
 		
 		button_addition.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				String r = textField.getText();
-				textField.setText(r + " + ");
+				text_input = textField.getText();
+				textField.setText(text_input + " + ");
 			}
 		});
 		
 		
 		Button_percentage.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				String r = textField.getText();
-				textField.setText(r + " % ");
+				text_input = textField.getText();
+				textField.setText(text_input + " % ");
 			}
 		});
 		
 		Button_xy.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				String r = textField.getText();
-				textField.setText(r + " X^Y ");
+				text_input = textField.getText();
+				textField.setText(text_input + " X^Y ");
 			}
 		});	
 		
 		Button_square.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {			
-				String dblNum = textField.getText();	
-				double resulted = cao.square(Double.parseDouble(dblNum));
-				String resultedString = Double.toString(resulted);
+			public void actionPerformed(ActionEvent e) {				
+				text_input = textField.getText();
+				resulted = cao.square(Double.parseDouble(text_input));
+				resultedString = Double.toString(resulted);
+				label_calculation.setText(text_input + " x² " + resultedString);
 				textField.setText(resultedString);
 			}
 		});
 		
 		Button_cube.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				String dblNum = textField.getText();	
-				double resulted = cao.cube(Double.parseDouble(dblNum));
-				String resultedString = Double.toString(resulted);
+				text_input = textField.getText();
+				resulted = cao.cube(Double.parseDouble(text_input));
+				resultedString = Double.toString(resulted);
+				label_calculation.setText(text_input + " x³ " + resultedString);
 				textField.setText(resultedString);
 			}
 		});
 		Button_pi.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				String dblNum = textField.getText();	
-				double resulted = cao.pi(Double.parseDouble(dblNum));
-				String resultedString = Double.toString(resulted);
+				text_input = textField.getText();
+				resulted = cao.pi(Double.parseDouble(text_input));
+				resultedString = Double.toString(resulted);
+				label_calculation.setText(text_input + " π  " + resultedString);
 				textField.setText(resultedString);
 			}
 		});
 		
 		Button_sqrt.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				String dblNum = textField.getText();	
-				double resulted = cao.sqrt(Double.parseDouble(dblNum));
-				String resultedString = Double.toString(resulted);
+				text_input = textField.getText();
+				resulted = cao.sqrt(Double.parseDouble(text_input));
+				resultedString = Double.toString(resulted);
+				label_calculation.setText(text_input + " √ " + resultedString);
 				textField.setText(resultedString);
 			}
 		});
@@ -345,6 +361,7 @@ public class MainFrame {
 		Button_clean.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				textField.setText("");
+				label_calculation.setText("");
 			}
 		});
 	}
