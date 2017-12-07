@@ -1,13 +1,9 @@
-package com.example.maven.calculator_niklass;
+package com.example.maven.calculator_niklass_class;
 
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JTextField;
-
-import com.example.maven.calculator_niklass_class.CalculatorAdvancedOperations;
-import com.example.maven.calculator_niklass_class.CalculatorBasicOperations;
-
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.InputMethodListener;
