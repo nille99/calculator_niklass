@@ -1,12 +1,14 @@
-package com.example.maven.calculator_niklass_class;
-
-import java.awt.EventQueue;
+package com.example.maven.calculator_niklass_main;
 
 import javax.swing.JFrame;
 import javax.swing.JTextField;
+
+import com.example.maven.calculator_niklass_class.CalculatorAdvancedOperations;
+import com.example.maven.calculator_niklass_class.CalculatorBasicOperations;
+
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
-import java.awt.event.InputMethodListener;
+
 import java.util.StringTokenizer;
 import java.awt.event.ActionEvent;
 
@@ -46,22 +48,6 @@ public class MainFrame {
 	CalculatorBasicOperations cbo = new CalculatorBasicOperations();
 	CalculatorAdvancedOperations cao = new CalculatorAdvancedOperations();
 
-	/**
-	 * Launch the application.
-	 
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					MainFrame window = new MainFrame();
-					window.frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
-	 */
 	/**
 	 * Create the application.
 	 */

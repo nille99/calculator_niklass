@@ -1,6 +1,4 @@
-package com.example.maven.calculator_niklass_class;
-
-
+package com.example.maven.calculator_niklass_main;
 
 public class Main {
 
