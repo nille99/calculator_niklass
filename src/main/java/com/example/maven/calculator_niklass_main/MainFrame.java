@@ -49,14 +49,14 @@ public class MainFrame {
 	
 	CalculatorBasicOperations cbo = new CalculatorBasicOperations();
 	CalculatorAdvancedOperations cao = new CalculatorAdvancedOperations();
-
-	//private String textInput = "";	
+	
 	private double resulted = 0.0;
 	private String resultedString = "";
 	private String textInput = textField.getText();	
 	private double dblNum1 = 0;
 	private double dblNum3 = 0;
 	private String dblObr = "";
+	String dblObrCheck = "";
 
 	
 	/**
@@ -152,7 +152,7 @@ public class MainFrame {
 				dblNum1 = 0;
 				dblNum3 = 0;
 				dblObr = "";
-				String dblObrCheck = "";
+				dblObrCheck = "";
 				resulted = 0;
 
 				while (st.hasMoreTokens()) {
@@ -164,11 +164,17 @@ public class MainFrame {
 					}
 
 					dblObr = st.nextToken().trim();		
-		
-					dblNum3 = Double.parseDouble(st.nextToken().trim());
-					
+					dblObrCheck =st.nextToken().trim();				
 	
-						
+					//if the user use ex + +
+			        for (int i = 1; i < 2; i++) {
+						if (isInteger(dblObrCheck)) {
+							dblNum3 = Double.parseDouble(dblObrCheck);
+						}else {
+							dblObrCheck =st.nextToken().trim();
+							i = 0;
+						}
+			        }	
 	
 
 					if (dblObr.equalsIgnoreCase("+")) {
@@ -376,5 +382,16 @@ public class MainFrame {
 				label_calculation.setText("");
 			}
 		});
+	}
+	public static boolean isInteger(String s) {
+	    try { 
+	        Integer.parseInt(s); 
+	    } catch(NumberFormatException e) { 
+	        return false; 
+	    } catch(NullPointerException e) {
+	        return false;
+	    }
+	    // only got here if we didn't return false
+	    return true;
 	}
 }
