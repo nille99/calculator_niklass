@@ -185,4 +185,43 @@ public class CalculatorAdvancedOperationsTest {
 
 	}
 
+	//--------------
+	@Test
+	public void testPiPositiveNumbers() {
+		double firstNumber = 0;
+		double result = 0;
+
+		for (int i = 0; i < 50; i++) {
+			firstNumber = Double.valueOf(df.format(random.nextDouble() * 10));
+			result = (firstNumber*Math.PI);
+		
+			LOG.info("Testing the method pi with: " + firstNumber);
+			assertEquals(Math.round(calculator.pi(firstNumber)), Math.round(result), 1);
+
+		}
+	}
+
+	@Test
+	public void testPiZeros() {
+		double firstNumber = 0;
+		double result = (firstNumber*Math.PI);
+
+		LOG.info("Testing the method pi with: " + firstNumber);
+		assertEquals(Math.round(calculator.pi(firstNumber)), Math.round(result), 1);
+	}
+
+	@Test
+	public void testPiNegativeNumbers() {
+		double firstNumber = 0;
+		double result = 0;
+
+		for (int i = 0; i < 50; i++) {
+			firstNumber = Double.valueOf(df.format(-random.nextDouble() * 10));
+			result = (firstNumber*Math.PI);
+
+			LOG.info("Testing the method pi with: " + firstNumber);
+			assertEquals(Math.round(calculator.pi(firstNumber)), Math.round(result), 1);
+		}
+	}	
+	
 }
