@@ -261,5 +261,49 @@ public class CalculatorAdvancedOperationsTest {
 			assertEquals(Math.round(calculator.sqrt(firstNumber)), Math.round(result), 1);
 		}
 	}	
-	
+
+	//--------------
+		@Test
+		public void testRaisedToThePowerOfPositiveNumbers() {
+			double base = 0;
+			double exponent = 0;
+			double result = 0;
+
+			for (int i = 0; i < 50; i++) {
+				base = Double.valueOf(df.format(random.nextDouble() * 10));
+				exponent = Double.valueOf(df.format(random.nextDouble() * 10));
+				result = (Math.pow(base, exponent));
+			
+				LOG.info("Testing the method raisedToThePowerOf with: " + base + " and " + exponent);
+				assertEquals(Math.round(calculator.raisedToThePowerOf(base, exponent)), Math.round(result), 1);
+
+			}
+		}
+
+		@Test
+		public void testRaisedToThePowerOfZeros() {
+			double base = 0;
+			double exponent = 0;
+			double result = (Math.pow(base, exponent));
+
+			LOG.info("Testing the method raisedToThePowerOf with: " + base + " and " + exponent);
+			assertEquals(Math.round(calculator.raisedToThePowerOf(base, exponent)), Math.round(result), 1);
+		}
+
+		@Test
+		public void testRaisedToThePowerOfNegativeNumbers() {
+			double base = 0;
+			double exponent = 0;
+			double result = 0;
+
+			for (int i = 0; i < 50; i++) {
+				base = Double.valueOf(df.format(-random.nextDouble() * 10));
+				exponent = Double.valueOf(df.format(-random.nextDouble() * 10));
+				result = (Math.pow(base, exponent));
+				
+				LOG.info("Testing the method raisedToThePowerOf with: " + base + " and " + exponent);
+				assertEquals(Math.round(calculator.raisedToThePowerOf(base, exponent)), Math.round(result), 1);
+			}
+		}	
+
 }
