@@ -223,5 +223,43 @@ public class CalculatorAdvancedOperationsTest {
 			assertEquals(Math.round(calculator.pi(firstNumber)), Math.round(result), 1);
 		}
 	}	
+	//--------------
+	@Test
+	public void testSqrtPositiveNumbers() {
+		double firstNumber = 0;
+		double result = 0;
+
+		for (int i = 0; i < 50; i++) {
+			firstNumber = Double.valueOf(df.format(random.nextDouble() * 10));
+			result = (Math.sqrt(firstNumber));
+		
+			LOG.info("Testing the method sqrt with: " + firstNumber);
+			assertEquals(Math.round(calculator.sqrt(firstNumber)), Math.round(result), 1);
+
+		}
+	}
+
+	@Test
+	public void testSqrtZeros() {
+		double firstNumber = 0;
+		double result = (Math.sqrt(firstNumber));
+
+		LOG.info("Testing the method sqrt with: " + firstNumber);
+		assertEquals(Math.round(calculator.sqrt(firstNumber)), Math.round(result), 1);
+	}
+
+	@Test
+	public void testSqrtNegativeNumbers() {
+		double firstNumber = 0;
+		double result = 0;
+
+		for (int i = 0; i < 50; i++) {
+			firstNumber = Double.valueOf(df.format(-random.nextDouble() * 10));
+			result = (Math.sqrt(firstNumber));
+			
+			LOG.info("Testing the method sqrt with: " + firstNumber);
+			assertEquals(Math.round(calculator.sqrt(firstNumber)), Math.round(result), 1);
+		}
+	}	
 	
 }
