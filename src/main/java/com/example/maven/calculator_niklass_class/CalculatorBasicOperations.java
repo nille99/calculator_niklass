@@ -1,5 +1,4 @@
 package com.example.maven.calculator_niklass_class;
-
 import javax.swing.JOptionPane;
 
 import com.example.maven.calculator_niklass_interface.CalculatorBasicOperationsInterface;
@@ -8,7 +7,7 @@ public class CalculatorBasicOperations implements CalculatorBasicOperationsInter
 	public double addition(double firstNumber, double secondNumber) {
 		return firstNumber + secondNumber;
 	}
-
+	
 	public double subtraction(double firstNumber, double secondNumber) {
 		return firstNumber - secondNumber;
 	}
@@ -29,6 +28,8 @@ public class CalculatorBasicOperations implements CalculatorBasicOperationsInter
 		}
 
 	}
+
+
 
 
 }
