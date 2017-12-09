@@ -2,6 +2,7 @@ package com.example.maven.calculator_niklass;
 
 import static org.junit.Assert.*;
 
+import java.text.DecimalFormat;
 import java.util.Random;
 import java.util.logging.Logger;
 
@@ -10,32 +11,178 @@ import org.junit.Test;
 import com.example.maven.calculator_niklass_class.CalculatorAdvancedOperations;
 
 public class CalculatorAdvancedOperationsTest {
-	
-	CalculatorAdvancedOperations c = new CalculatorAdvancedOperations();
+
+	CalculatorAdvancedOperations calculator = new CalculatorAdvancedOperations();
 	static final Logger LOG = Logger.getLogger(CalculatorAdvancedOperations.class.getName());
-	Random r = new Random();
+	Random random = new Random();
+	DecimalFormat df = new DecimalFormat();
 
 	@Test
-	public void testSquareMethod() {
-		for(int i = 0; i <10 ;i++) {
-			int firstNumber = r.nextInt(100);
-			int result = 0;
+	public void testSquarePositiveNumbers() {
+		double firstNumber = 0;
+		double result = 0;
+
+		for (int i = 0; i < 50; i++) {
+			firstNumber = Double.valueOf(df.format(random.nextDouble() * 10));
 			result = firstNumber * firstNumber;
-			LOG.info("Testing the square add with" + firstNumber + " and " + firstNumber);
-			assertEquals(c.square(firstNumber), result);
+
+			LOG.info("Testing the method square with: " + firstNumber);
+			assertEquals(Math.round(calculator.square(firstNumber)), Math.round(result), 1);
+
 		}
 	}
-	
+
 	@Test
-	public void testCubeMethod() {
-		for(int i = 0; i <10 ;i++) {
-			int firstNumber = r.nextInt(100);
-			int result = 0;
-			result = firstNumber * firstNumber * firstNumber;
-			LOG.info("Testing the cube add with" + firstNumber);
-			assertEquals(c.cube(firstNumber), result);
+	public void testSquareZeros() {
+		double firstNumber = 0;
+		double result = firstNumber * firstNumber;
+
+		LOG.info("Testing the method square with: " + firstNumber);
+		assertEquals(Math.round(calculator.square(firstNumber)), Math.round(result), 1);
+	}
+
+	@Test
+	public void testSquareNegativeNumbers() {
+		double firstNumber = 0;
+		double result = 0;
+
+		for (int i = 0; i < 50; i++) {
+			firstNumber = Double.valueOf(df.format(-random.nextDouble() * 10));
+			result = firstNumber * firstNumber;
+
+			LOG.info("Testing the method square with: " + firstNumber);
+			assertEquals(Math.round(calculator.square(firstNumber)), Math.round(result), 1);
+
 		}
 	}
-	
+
+	/// ---------------
+
+	@Test
+	public void testCubePositiveNumbers() {
+		double firstNumber = 0;
+		double result = 0;
+
+		for (int i = 0; i < 50; i++) {
+			firstNumber = Double.valueOf(df.format(random.nextDouble() * 10));
+			result = firstNumber * firstNumber * firstNumber;
+
+			LOG.info("Testing the method square with: " + firstNumber);
+			assertEquals(Math.round(calculator.cube(firstNumber)), Math.round(result), 1);
+
+		}
+	}
+
+	@Test
+	public void testCubeZeros() {
+		double firstNumber = 0;
+		double result = firstNumber * firstNumber * firstNumber;
+
+		LOG.info("Testing the method square with: " + firstNumber);
+		assertEquals(Math.round(calculator.cube(firstNumber)), Math.round(result), 1);
+	}
+
+	@Test
+	public void testCubeNegativeNumbers() {
+		double firstNumber = 0;
+		double result = 0;
+
+		for (int i = 0; i < 50; i++) {
+			firstNumber = Double.valueOf(df.format(-random.nextDouble() * 10));
+			result = firstNumber * firstNumber * firstNumber;
+
+			LOG.info("Testing the method square with: " + firstNumber);
+			assertEquals(Math.round(calculator.cube(firstNumber)), Math.round(result), 1);
+		}
+	}
+	/// ---------------
+
+	@Test
+	public void testPercentagePositiveNumbers() {
+		double number = 0;
+		double percentageNumber = 0;
+		double result = 0;
+
+		for (int i = 0; i < 50; i++) {
+			number = Double.valueOf(df.format(random.nextDouble() * 10));
+			percentageNumber = Double.valueOf(df.format(random.nextDouble() * 100));
+			result = number * (percentageNumber / 100);
+
+			LOG.info("Testing the method percentage with: " + percentageNumber + "% av " + number);
+			assertEquals(Math.round(calculator.percentage(percentageNumber, number)), Math.round(result), 1);
+
+		}
+	}
+
+	@Test
+	public void testPercentageZeros() {
+		double number = 0;
+		double percentageNumber = 0;
+		double result = 0;
+		// Testing the case 0 number/ random %
+		for (int i = 0; i < 50; i++) {
+			percentageNumber = Double.valueOf(df.format(random.nextDouble() * 100));
+			result = number * (percentageNumber / 100);
+
+			LOG.info("Testing the method percentage with: " + percentageNumber + "% av " + number);
+			assertEquals(Math.round(calculator.percentage(percentageNumber, number)), Math.round(result), 1);
+
+		}
+		// Testing the case random number/ 0 %
+
+		for (int i = 0; i < 50; i++) {
+			number = Double.valueOf(df.format(random.nextDouble() * 100));
+			result = number * (percentageNumber / 100);
+
+			LOG.info("Testing the method percentage with: " + percentageNumber + "% av " + number);
+			assertEquals(Math.round(calculator.percentage(percentageNumber, number)), Math.round(result), 1);
+
+		}
+
+		// Testing the case 0 number/ 0 %
+		for (int i = 0; i < 50; i++) {
+			result = number * (percentageNumber / 100);
+
+			LOG.info("Testing the method percentage with: " + percentageNumber + "% av " + number);
+			assertEquals(Math.round(calculator.percentage(percentageNumber, number)), Math.round(result), 1);
+
+		}
+	}
+
+	@Test
+	public void testPercentageNegativeNumbers() {
+		double number = 0;
+		double percentageNumber = 0;
+		double result = 0;
+
+		// Testing the case negative random number/ random %
+		for (int i = 0; i < 50; i++) {
+			number = Double.valueOf(df.format(-random.nextDouble() * 10));
+			percentageNumber = Double.valueOf(df.format(random.nextDouble() * 100));
+			result = number * (percentageNumber / 100);
+
+			LOG.info("Testing the method percentage with: " + percentageNumber + "% av " + number);
+			assertEquals(Math.round(calculator.percentage(percentageNumber, number)), Math.round(result), 1);
+		}
+		// Testing the case negative random number/ negative random %
+		for (int i = 0; i < 50; i++) {
+			number = Double.valueOf(df.format(-random.nextDouble() * 10));
+			percentageNumber = Double.valueOf(df.format(-random.nextDouble() * 100));
+			result = number * (percentageNumber / 100);
+
+			LOG.info("Testing the method percentage with: " + percentageNumber + "% av " + number);
+			assertEquals(Math.round(calculator.percentage(percentageNumber, number)), Math.round(result), 1);
+		}
+		// Testing the case random number/ negative random %
+		for (int i = 0; i < 50; i++) {
+			number = Double.valueOf(df.format(random.nextDouble() * 10));
+			percentageNumber = Double.valueOf(df.format(-random.nextDouble() * 100));
+			result = number * (percentageNumber / 100);
+
+			LOG.info("Testing the method percentage with: " + percentageNumber + "% av " + number);
+			assertEquals(Math.round(calculator.percentage(percentageNumber, number)), Math.round(result), 1);
+		}
+
+	}
 
 }

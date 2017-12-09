@@ -21,7 +21,7 @@ public class CalculatorBasicOperations implements CalculatorBasicOperationsInter
 		double result = firstNumber / secondNumber;
 		if (Double.isInfinite(result)) {
 			System.out.println("Division by zero?");
-			JOptionPane.showMessageDialog(null, "You can not divide by zero!");
+			//JOptionPane.showMessageDialog(null, "You can not divide by zero!");
 			return -0.123456789;
 		} else {
 			return result;
