@@ -284,7 +284,24 @@ public class CalculatorAdvancedOperationsTest {
 		public void testRaisedToThePowerOfZeros() {
 			double base = 0;
 			double exponent = 0;
-			double result = (Math.pow(base, exponent));
+			double result = 0;		
+			//Testing the case 0 base/ 0 exponent
+			
+			result = (Math.pow(base, exponent));
+
+			LOG.info("Testing the method raisedToThePowerOf with: " + base + " and " + exponent);
+			assertEquals(Math.round(calculator.raisedToThePowerOf(base, exponent)), Math.round(result), 1);
+
+			//Testing the case 0 base/ random exponent
+			exponent = Double.valueOf(df.format(random.nextDouble() * 10));
+			result = (Math.pow(base, exponent));
+
+			LOG.info("Testing the method raisedToThePowerOf with: " + base + " and " + exponent);
+			assertEquals(Math.round(calculator.raisedToThePowerOf(base, exponent)), Math.round(result), 1);
+			
+			//Testing the case random base/ 0 exponent
+			base = Double.valueOf(df.format(random.nextDouble() * 10));
+			result = (Math.pow(base, exponent));
 
 			LOG.info("Testing the method raisedToThePowerOf with: " + base + " and " + exponent);
 			assertEquals(Math.round(calculator.raisedToThePowerOf(base, exponent)), Math.round(result), 1);
@@ -296,6 +313,7 @@ public class CalculatorAdvancedOperationsTest {
 			double exponent = 0;
 			double result = 0;
 
+			//Testing the case negative random base/ negative random exponent
 			for (int i = 0; i < 50; i++) {
 				base = Double.valueOf(df.format(-random.nextDouble() * 10));
 				exponent = Double.valueOf(df.format(-random.nextDouble() * 10));
@@ -304,6 +322,22 @@ public class CalculatorAdvancedOperationsTest {
 				LOG.info("Testing the method raisedToThePowerOf with: " + base + " and " + exponent);
 				assertEquals(Math.round(calculator.raisedToThePowerOf(base, exponent)), Math.round(result), 1);
 			}
+			// Testing the case negative random base/ 0 exponent
+			for (int i = 0; i < 50; i++) {
+				base = Double.valueOf(df.format(-random.nextDouble() * 10));
+				result = (Math.pow(base, exponent));
+				
+				LOG.info("Testing the method raisedToThePowerOf with: " + base + " and " + exponent);
+				assertEquals(Math.round(calculator.raisedToThePowerOf(base, exponent)), Math.round(result), 1);
+			}
+			// Testing the case 0 base/ negative random exponent
+			for (int i = 0; i < 50; i++) {
+				exponent = Double.valueOf(df.format(-random.nextDouble() * 10));
+				result = (Math.pow(base, exponent));
+				
+				LOG.info("Testing the method raisedToThePowerOf with: " + base + " and " + exponent);
+				assertEquals(Math.round(calculator.raisedToThePowerOf(base, exponent)), Math.round(result), 1);
+			}
 		}	
 
-}
+}		
