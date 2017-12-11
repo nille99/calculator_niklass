@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="30" passed="30">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Surefire suite" duration-ms="1698" started-at="2017-12-11T09:08:34Z" finished-at="2017-12-11T09:08:36Z">
+    <groups>
+    </groups>
+    <test name="Surefire test" duration-ms="1698" started-at="2017-12-11T09:08:34Z" finished-at="2017-12-11T09:08:36Z">
+      <class name="com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest">
+        <test-method status="PASS" signature="testPiPositiveNumbers()[pri:0, instance:testPiPositiveNumbers(com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest)]" name="testPiPositiveNumbers" duration-ms="192" started-at="2017-12-11T10:08:35Z" finished-at="2017-12-11T10:08:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPiPositiveNumbers -->
+        <test-method status="PASS" signature="testSquarePositiveNumbers()[pri:0, instance:testSquarePositiveNumbers(com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest)]" name="testSquarePositiveNumbers" duration-ms="129" started-at="2017-12-11T10:08:35Z" finished-at="2017-12-11T10:08:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSquarePositiveNumbers -->
+        <test-method status="PASS" signature="testPiNegativeNumbers()[pri:0, instance:testPiNegativeNumbers(com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest)]" name="testPiNegativeNumbers" duration-ms="75" started-at="2017-12-11T10:08:35Z" finished-at="2017-12-11T10:08:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPiNegativeNumbers -->
+        <test-method status="PASS" signature="testSquareNegativeNumbers()[pri:0, instance:testSquareNegativeNumbers(com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest)]" name="testSquareNegativeNumbers" duration-ms="70" started-at="2017-12-11T10:08:35Z" finished-at="2017-12-11T10:08:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSquareNegativeNumbers -->
+        <test-method status="PASS" signature="testPiZeros()[pri:0, instance:testPiZeros(com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest)]" name="testPiZeros" duration-ms="0" started-at="2017-12-11T10:08:35Z" finished-at="2017-12-11T10:08:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPiZeros -->
+        <test-method status="PASS" signature="testPercentageZeros()[pri:0, instance:testPercentageZeros(com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest)]" name="testPercentageZeros" duration-ms="157" started-at="2017-12-11T10:08:35Z" finished-at="2017-12-11T10:08:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPercentageZeros -->
+        <test-method status="PASS" signature="testCubeZeros()[pri:0, instance:testCubeZeros(com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest)]" name="testCubeZeros" duration-ms="7" started-at="2017-12-11T10:08:35Z" finished-at="2017-12-11T10:08:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCubeZeros -->
+        <test-method status="PASS" signature="testSquareZeros()[pri:0, instance:testSquareZeros(com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest)]" name="testSquareZeros" duration-ms="0" started-at="2017-12-11T10:08:35Z" finished-at="2017-12-11T10:08:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSquareZeros -->
+        <test-method status="PASS" signature="testPercentagePositiveNumbers()[pri:0, instance:testPercentagePositiveNumbers(com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest)]" name="testPercentagePositiveNumbers" duration-ms="53" started-at="2017-12-11T10:08:35Z" finished-at="2017-12-11T10:08:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPercentagePositiveNumbers -->
+        <test-method status="PASS" signature="testSqrtZeros()[pri:0, instance:testSqrtZeros(com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest)]" name="testSqrtZeros" duration-ms="1" started-at="2017-12-11T10:08:35Z" finished-at="2017-12-11T10:08:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSqrtZeros -->
+        <test-method status="PASS" signature="testPercentageNegativeNumbers()[pri:0, instance:testPercentageNegativeNumbers(com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest)]" name="testPercentageNegativeNumbers" duration-ms="148" started-at="2017-12-11T10:08:35Z" finished-at="2017-12-11T10:08:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPercentageNegativeNumbers -->
+        <test-method status="PASS" signature="testRaisedToThePowerOfZeros()[pri:0, instance:testRaisedToThePowerOfZeros(com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest)]" name="testRaisedToThePowerOfZeros" duration-ms="1" started-at="2017-12-11T10:08:35Z" finished-at="2017-12-11T10:08:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRaisedToThePowerOfZeros -->
+        <test-method status="PASS" signature="testCubePositiveNumbers()[pri:0, instance:testCubePositiveNumbers(com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest)]" name="testCubePositiveNumbers" duration-ms="31" started-at="2017-12-11T10:08:35Z" finished-at="2017-12-11T10:08:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCubePositiveNumbers -->
+        <test-method status="PASS" signature="testSqrtPositiveNumbers()[pri:0, instance:testSqrtPositiveNumbers(com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest)]" name="testSqrtPositiveNumbers" duration-ms="39" started-at="2017-12-11T10:08:35Z" finished-at="2017-12-11T10:08:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSqrtPositiveNumbers -->
+        <test-method status="PASS" signature="testCubeNegativeNumbers()[pri:0, instance:testCubeNegativeNumbers(com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest)]" name="testCubeNegativeNumbers" duration-ms="41" started-at="2017-12-11T10:08:35Z" finished-at="2017-12-11T10:08:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCubeNegativeNumbers -->
+        <test-method status="PASS" signature="testSqrtNegativeNumbers()[pri:0, instance:testSqrtNegativeNumbers(com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest)]" name="testSqrtNegativeNumbers" duration-ms="23" started-at="2017-12-11T10:08:36Z" finished-at="2017-12-11T10:08:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSqrtNegativeNumbers -->
+        <test-method status="PASS" signature="testRaisedToThePowerOfPositiveNumbers()[pri:0, instance:testRaisedToThePowerOfPositiveNumbers(com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest)]" name="testRaisedToThePowerOfPositiveNumbers" duration-ms="33" started-at="2017-12-11T10:08:36Z" finished-at="2017-12-11T10:08:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRaisedToThePowerOfPositiveNumbers -->
+        <test-method status="PASS" signature="testRaisedToThePowerOfNegativeNumbers()[pri:0, instance:testRaisedToThePowerOfNegativeNumbers(com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest)]" name="testRaisedToThePowerOfNegativeNumbers" duration-ms="90" started-at="2017-12-11T10:08:36Z" finished-at="2017-12-11T10:08:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRaisedToThePowerOfNegativeNumbers -->
+      </class> <!-- com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest -->
+      <class name="com.example.maven.calculator_niklass.CalculatorBasicOperationsTest">
+        <test-method status="PASS" signature="testmultiplicationPositiveNumbers()[pri:0, instance:testmultiplicationPositiveNumbers(com.example.maven.calculator_niklass.CalculatorBasicOperationsTest)]" name="testmultiplicationPositiveNumbers" duration-ms="27" started-at="2017-12-11T10:08:36Z" finished-at="2017-12-11T10:08:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testmultiplicationPositiveNumbers -->
+        <test-method status="PASS" signature="testsubtractionZeros()[pri:0, instance:testsubtractionZeros(com.example.maven.calculator_niklass.CalculatorBasicOperationsTest)]" name="testsubtractionZeros" duration-ms="28" started-at="2017-12-11T10:08:36Z" finished-at="2017-12-11T10:08:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testsubtractionZeros -->
+        <test-method status="PASS" signature="testmultiplicationNegativeNumbers()[pri:0, instance:testmultiplicationNegativeNumbers(com.example.maven.calculator_niklass.CalculatorBasicOperationsTest)]" name="testmultiplicationNegativeNumbers" duration-ms="25" started-at="2017-12-11T10:08:36Z" finished-at="2017-12-11T10:08:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testmultiplicationNegativeNumbers -->
+        <test-method status="PASS" signature="testadditionPositiveNumbers()[pri:0, instance:testadditionPositiveNumbers(com.example.maven.calculator_niklass.CalculatorBasicOperationsTest)]" name="testadditionPositiveNumbers" duration-ms="28" started-at="2017-12-11T10:08:36Z" finished-at="2017-12-11T10:08:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testadditionPositiveNumbers -->
+        <test-method status="PASS" signature="testadditionNegativeNumbers()[pri:0, instance:testadditionNegativeNumbers(com.example.maven.calculator_niklass.CalculatorBasicOperationsTest)]" name="testadditionNegativeNumbers" duration-ms="16" started-at="2017-12-11T10:08:36Z" finished-at="2017-12-11T10:08:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testadditionNegativeNumbers -->
+        <test-method status="PASS" signature="testmultiplicationZeros()[pri:0, instance:testmultiplicationZeros(com.example.maven.calculator_niklass.CalculatorBasicOperationsTest)]" name="testmultiplicationZeros" duration-ms="48" started-at="2017-12-11T10:08:36Z" finished-at="2017-12-11T10:08:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testmultiplicationZeros -->
+        <test-method status="PASS" signature="testsubtractionPositiveNumbers()[pri:0, instance:testsubtractionPositiveNumbers(com.example.maven.calculator_niklass.CalculatorBasicOperationsTest)]" name="testsubtractionPositiveNumbers" duration-ms="14" started-at="2017-12-11T10:08:36Z" finished-at="2017-12-11T10:08:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testsubtractionPositiveNumbers -->
+        <test-method status="PASS" signature="testdivisionZeros()[pri:0, instance:testdivisionZeros(com.example.maven.calculator_niklass.CalculatorBasicOperationsTest)]" name="testdivisionZeros" duration-ms="72" started-at="2017-12-11T10:08:36Z" finished-at="2017-12-11T10:08:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testdivisionZeros -->
+        <test-method status="PASS" signature="testsubtractionNegativeNumbers()[pri:0, instance:testsubtractionNegativeNumbers(com.example.maven.calculator_niklass.CalculatorBasicOperationsTest)]" name="testsubtractionNegativeNumbers" duration-ms="27" started-at="2017-12-11T10:08:36Z" finished-at="2017-12-11T10:08:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testsubtractionNegativeNumbers -->
+        <test-method status="PASS" signature="testdivisionPositiveNumbers()[pri:0, instance:testdivisionPositiveNumbers(com.example.maven.calculator_niklass.CalculatorBasicOperationsTest)]" name="testdivisionPositiveNumbers" duration-ms="40" started-at="2017-12-11T10:08:36Z" finished-at="2017-12-11T10:08:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testdivisionPositiveNumbers -->
+        <test-method status="PASS" signature="testdivisionNegativeNumbers()[pri:0, instance:testdivisionNegativeNumbers(com.example.maven.calculator_niklass.CalculatorBasicOperationsTest)]" name="testdivisionNegativeNumbers" duration-ms="27" started-at="2017-12-11T10:08:36Z" finished-at="2017-12-11T10:08:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testdivisionNegativeNumbers -->
+        <test-method status="PASS" signature="testadditionZeros()[pri:0, instance:testadditionZeros(com.example.maven.calculator_niklass.CalculatorBasicOperationsTest)]" name="testadditionZeros" duration-ms="51" started-at="2017-12-11T10:08:36Z" finished-at="2017-12-11T10:08:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testadditionZeros -->
+      </class> <!-- com.example.maven.calculator_niklass.CalculatorBasicOperationsTest -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>

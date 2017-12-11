@@ -1,0 +1,229 @@
+<html>
+<head>
+<title>TestNG:  Surefire test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Surefire test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>30/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Mon Dec 11 10:08:34 CET 2017</td>
+</tr>
+<tr><td>Total time:</td><td>1 seconds (1698 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest.testCubeNegativeNumbers()'><b>testCubeNegativeNumbers</b><br>Test class: com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest</td>
+<td></td>
+<td>0</td>
+<td>testCubeNegativeNumbers(com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest)</td></tr>
+<tr>
+<td title='com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest.testCubePositiveNumbers()'><b>testCubePositiveNumbers</b><br>Test class: com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest</td>
+<td></td>
+<td>0</td>
+<td>testCubePositiveNumbers(com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest)</td></tr>
+<tr>
+<td title='com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest.testCubeZeros()'><b>testCubeZeros</b><br>Test class: com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest</td>
+<td></td>
+<td>0</td>
+<td>testCubeZeros(com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest)</td></tr>
+<tr>
+<td title='com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest.testPercentageNegativeNumbers()'><b>testPercentageNegativeNumbers</b><br>Test class: com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest</td>
+<td></td>
+<td>0</td>
+<td>testPercentageNegativeNumbers(com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest)</td></tr>
+<tr>
+<td title='com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest.testPercentagePositiveNumbers()'><b>testPercentagePositiveNumbers</b><br>Test class: com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest</td>
+<td></td>
+<td>0</td>
+<td>testPercentagePositiveNumbers(com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest)</td></tr>
+<tr>
+<td title='com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest.testPercentageZeros()'><b>testPercentageZeros</b><br>Test class: com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest</td>
+<td></td>
+<td>0</td>
+<td>testPercentageZeros(com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest)</td></tr>
+<tr>
+<td title='com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest.testPiNegativeNumbers()'><b>testPiNegativeNumbers</b><br>Test class: com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest</td>
+<td></td>
+<td>0</td>
+<td>testPiNegativeNumbers(com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest)</td></tr>
+<tr>
+<td title='com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest.testPiPositiveNumbers()'><b>testPiPositiveNumbers</b><br>Test class: com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest</td>
+<td></td>
+<td>0</td>
+<td>testPiPositiveNumbers(com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest)</td></tr>
+<tr>
+<td title='com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest.testPiZeros()'><b>testPiZeros</b><br>Test class: com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest</td>
+<td></td>
+<td>0</td>
+<td>testPiZeros(com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest)</td></tr>
+<tr>
+<td title='com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest.testRaisedToThePowerOfNegativeNumbers()'><b>testRaisedToThePowerOfNegativeNumbers</b><br>Test class: com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest</td>
+<td></td>
+<td>0</td>
+<td>testRaisedToThePowerOfNegativeNumbers(com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest)</td></tr>
+<tr>
+<td title='com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest.testRaisedToThePowerOfPositiveNumbers()'><b>testRaisedToThePowerOfPositiveNumbers</b><br>Test class: com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest</td>
+<td></td>
+<td>0</td>
+<td>testRaisedToThePowerOfPositiveNumbers(com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest)</td></tr>
+<tr>
+<td title='com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest.testRaisedToThePowerOfZeros()'><b>testRaisedToThePowerOfZeros</b><br>Test class: com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest</td>
+<td></td>
+<td>0</td>
+<td>testRaisedToThePowerOfZeros(com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest)</td></tr>
+<tr>
+<td title='com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest.testSqrtNegativeNumbers()'><b>testSqrtNegativeNumbers</b><br>Test class: com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest</td>
+<td></td>
+<td>0</td>
+<td>testSqrtNegativeNumbers(com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest)</td></tr>
+<tr>
+<td title='com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest.testSqrtPositiveNumbers()'><b>testSqrtPositiveNumbers</b><br>Test class: com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest</td>
+<td></td>
+<td>0</td>
+<td>testSqrtPositiveNumbers(com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest)</td></tr>
+<tr>
+<td title='com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest.testSqrtZeros()'><b>testSqrtZeros</b><br>Test class: com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest</td>
+<td></td>
+<td>0</td>
+<td>testSqrtZeros(com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest)</td></tr>
+<tr>
+<td title='com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest.testSquareNegativeNumbers()'><b>testSquareNegativeNumbers</b><br>Test class: com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest</td>
+<td></td>
+<td>0</td>
+<td>testSquareNegativeNumbers(com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest)</td></tr>
+<tr>
+<td title='com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest.testSquarePositiveNumbers()'><b>testSquarePositiveNumbers</b><br>Test class: com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest</td>
+<td></td>
+<td>0</td>
+<td>testSquarePositiveNumbers(com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest)</td></tr>
+<tr>
+<td title='com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest.testSquareZeros()'><b>testSquareZeros</b><br>Test class: com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest</td>
+<td></td>
+<td>0</td>
+<td>testSquareZeros(com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest)</td></tr>
+<tr>
+<td title='com.example.maven.calculator_niklass.CalculatorBasicOperationsTest.testadditionNegativeNumbers()'><b>testadditionNegativeNumbers</b><br>Test class: com.example.maven.calculator_niklass.CalculatorBasicOperationsTest</td>
+<td></td>
+<td>0</td>
+<td>testadditionNegativeNumbers(com.example.maven.calculator_niklass.CalculatorBasicOperationsTest)</td></tr>
+<tr>
+<td title='com.example.maven.calculator_niklass.CalculatorBasicOperationsTest.testadditionPositiveNumbers()'><b>testadditionPositiveNumbers</b><br>Test class: com.example.maven.calculator_niklass.CalculatorBasicOperationsTest</td>
+<td></td>
+<td>0</td>
+<td>testadditionPositiveNumbers(com.example.maven.calculator_niklass.CalculatorBasicOperationsTest)</td></tr>
+<tr>
+<td title='com.example.maven.calculator_niklass.CalculatorBasicOperationsTest.testadditionZeros()'><b>testadditionZeros</b><br>Test class: com.example.maven.calculator_niklass.CalculatorBasicOperationsTest</td>
+<td></td>
+<td>0</td>
+<td>testadditionZeros(com.example.maven.calculator_niklass.CalculatorBasicOperationsTest)</td></tr>
+<tr>
+<td title='com.example.maven.calculator_niklass.CalculatorBasicOperationsTest.testdivisionNegativeNumbers()'><b>testdivisionNegativeNumbers</b><br>Test class: com.example.maven.calculator_niklass.CalculatorBasicOperationsTest</td>
+<td></td>
+<td>0</td>
+<td>testdivisionNegativeNumbers(com.example.maven.calculator_niklass.CalculatorBasicOperationsTest)</td></tr>
+<tr>
+<td title='com.example.maven.calculator_niklass.CalculatorBasicOperationsTest.testdivisionPositiveNumbers()'><b>testdivisionPositiveNumbers</b><br>Test class: com.example.maven.calculator_niklass.CalculatorBasicOperationsTest</td>
+<td></td>
+<td>0</td>
+<td>testdivisionPositiveNumbers(com.example.maven.calculator_niklass.CalculatorBasicOperationsTest)</td></tr>
+<tr>
+<td title='com.example.maven.calculator_niklass.CalculatorBasicOperationsTest.testdivisionZeros()'><b>testdivisionZeros</b><br>Test class: com.example.maven.calculator_niklass.CalculatorBasicOperationsTest</td>
+<td></td>
+<td>0</td>
+<td>testdivisionZeros(com.example.maven.calculator_niklass.CalculatorBasicOperationsTest)</td></tr>
+<tr>
+<td title='com.example.maven.calculator_niklass.CalculatorBasicOperationsTest.testmultiplicationNegativeNumbers()'><b>testmultiplicationNegativeNumbers</b><br>Test class: com.example.maven.calculator_niklass.CalculatorBasicOperationsTest</td>
+<td></td>
+<td>0</td>
+<td>testmultiplicationNegativeNumbers(com.example.maven.calculator_niklass.CalculatorBasicOperationsTest)</td></tr>
+<tr>
+<td title='com.example.maven.calculator_niklass.CalculatorBasicOperationsTest.testmultiplicationPositiveNumbers()'><b>testmultiplicationPositiveNumbers</b><br>Test class: com.example.maven.calculator_niklass.CalculatorBasicOperationsTest</td>
+<td></td>
+<td>0</td>
+<td>testmultiplicationPositiveNumbers(com.example.maven.calculator_niklass.CalculatorBasicOperationsTest)</td></tr>
+<tr>
+<td title='com.example.maven.calculator_niklass.CalculatorBasicOperationsTest.testmultiplicationZeros()'><b>testmultiplicationZeros</b><br>Test class: com.example.maven.calculator_niklass.CalculatorBasicOperationsTest</td>
+<td></td>
+<td>0</td>
+<td>testmultiplicationZeros(com.example.maven.calculator_niklass.CalculatorBasicOperationsTest)</td></tr>
+<tr>
+<td title='com.example.maven.calculator_niklass.CalculatorBasicOperationsTest.testsubtractionNegativeNumbers()'><b>testsubtractionNegativeNumbers</b><br>Test class: com.example.maven.calculator_niklass.CalculatorBasicOperationsTest</td>
+<td></td>
+<td>0</td>
+<td>testsubtractionNegativeNumbers(com.example.maven.calculator_niklass.CalculatorBasicOperationsTest)</td></tr>
+<tr>
+<td title='com.example.maven.calculator_niklass.CalculatorBasicOperationsTest.testsubtractionPositiveNumbers()'><b>testsubtractionPositiveNumbers</b><br>Test class: com.example.maven.calculator_niklass.CalculatorBasicOperationsTest</td>
+<td></td>
+<td>0</td>
+<td>testsubtractionPositiveNumbers(com.example.maven.calculator_niklass.CalculatorBasicOperationsTest)</td></tr>
+<tr>
+<td title='com.example.maven.calculator_niklass.CalculatorBasicOperationsTest.testsubtractionZeros()'><b>testsubtractionZeros</b><br>Test class: com.example.maven.calculator_niklass.CalculatorBasicOperationsTest</td>
+<td></td>
+<td>0</td>
+<td>testsubtractionZeros(com.example.maven.calculator_niklass.CalculatorBasicOperationsTest)</td></tr>
+</table><p>
+</body>
+</html>

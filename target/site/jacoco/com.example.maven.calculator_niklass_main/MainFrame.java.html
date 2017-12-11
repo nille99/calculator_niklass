@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>MainFrame.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">calculator_niklass</a> &gt; <a href="index.source.html" class="el_package">com.example.maven.calculator_niklass_main</a> &gt; <span class="el_source">MainFrame.java</span></div><h1>MainFrame.java</h1><pre class="source lang-java linenums">/***
+ * Assignment calculator MainFrame
+ * 
+ * @author Niklas
+ * @version 1.0
+ * 
+ * &lt;h1&gt;The calculator_ system&lt;/h1&gt;
+ * This is a GUI
+ *
+ */
+package com.example.maven.calculator_niklass_main;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+
+import com.example.maven.calculator_niklass_class.CalculatorAdvancedOperations;
+import com.example.maven.calculator_niklass_class.CalculatorBasicOperations;
+
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+
+import java.util.StringTokenizer;
+import java.awt.event.ActionEvent;
+
+public class MainFrame {
+
+	// private JTextField textField;
+<span class="nc" id="L29">	private JFrame frame = new JFrame();</span>
+<span class="nc" id="L30">	private JTextField textField = new JTextField();</span>
+
+<span class="nc" id="L32">	private JButton button_1 = new JButton(&quot;1&quot;);</span>
+<span class="nc" id="L33">	private JButton button_2 = new JButton(&quot;2&quot;);</span>
+<span class="nc" id="L34">	private JButton button_3 = new JButton(&quot;3&quot;);</span>
+<span class="nc" id="L35">	private JButton button_4 = new JButton(&quot;4&quot;);</span>
+<span class="nc" id="L36">	private JButton button_5 = new JButton(&quot;5&quot;);</span>
+<span class="nc" id="L37">	private JButton button_6 = new JButton(&quot;6&quot;);</span>
+<span class="nc" id="L38">	private JButton button_7 = new JButton(&quot;7&quot;);</span>
+<span class="nc" id="L39">	private JButton button_8 = new JButton(&quot;8&quot;);</span>
+<span class="nc" id="L40">	private JButton button_9 = new JButton(&quot;9&quot;);</span>
+<span class="nc" id="L41">	private JButton button_0 = new JButton(&quot;0&quot;);</span>
+
+<span class="nc" id="L43">	private JButton button_come = new JButton(&quot;.&quot;);</span>
+<span class="nc" id="L44">	private JButton button_equal = new JButton(&quot;=&quot;);</span>
+<span class="nc" id="L45">	private JButton Button_percentage = new JButton(&quot;%&quot;);</span>
+<span class="nc" id="L46">	private JButton Button_xy = new JButton(&quot;X^Y&quot;);</span>
+<span class="nc" id="L47">	private JButton Button_square = new JButton(&quot;x²&quot;);</span>
+<span class="nc" id="L48">	private JButton Button_cube = new JButton(&quot;x³&quot;);</span>
+<span class="nc" id="L49">	private JButton Button_pi = new JButton(&quot; π &quot;);</span>
+<span class="nc" id="L50">	private JButton Button_sqrt = new JButton(&quot;√&quot;);</span>
+<span class="nc" id="L51">	private JButton Button_clean = new JButton(&quot;C&quot;);</span>
+
+<span class="nc" id="L53">	private JButton Button_division = new JButton(&quot;÷&quot;);</span>
+<span class="nc" id="L54">	private JButton Button_multiplication = new JButton(&quot;x&quot;);</span>
+<span class="nc" id="L55">	private JButton button_subtraction = new JButton(&quot;-&quot;);</span>
+<span class="nc" id="L56">	private JButton button_addition = new JButton(&quot;+&quot;);</span>
+<span class="nc" id="L57">	private JLabel label_calculation = new JLabel(&quot;&quot;);</span>
+
+<span class="nc" id="L59">	CalculatorBasicOperations cbo = new CalculatorBasicOperations();</span>
+<span class="nc" id="L60">	CalculatorAdvancedOperations cao = new CalculatorAdvancedOperations();</span>
+
+<span class="nc" id="L62">	private double resulted = 0.0;</span>
+<span class="nc" id="L63">	private String resultedString = &quot;&quot;;</span>
+<span class="nc" id="L64">	private String textInput = textField.getText();</span>
+<span class="nc" id="L65">	private double dblNum1 = 0;</span>
+<span class="nc" id="L66">	private double dblNum3 = 0;</span>
+<span class="nc" id="L67">	private String dblObr = &quot;&quot;;</span>
+<span class="nc" id="L68">	String dblObrCheck = &quot;&quot;;</span>
+
+	/**
+	 * Create the application.
+	 */
+<span class="nc" id="L73">	public MainFrame() {</span>
+<span class="nc" id="L74">		initialize();</span>
+<span class="nc" id="L75">		addComponetsToFrame();</span>
+<span class="nc" id="L76">		addActionListeners();</span>
+<span class="nc" id="L77">	}</span>
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		// properties for frame
+<span class="nc" id="L84">		frame.setTitle(&quot;Calculator&quot;);</span>
+<span class="nc" id="L85">		frame.setBounds(100, 100, 352, 363);</span>
+<span class="nc" id="L86">		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);</span>
+<span class="nc" id="L87">		frame.getContentPane().setLayout(null);</span>
+
+		// set to main
+<span class="nc" id="L90">		frame.setVisible(true);</span>
+
+		// properties for label
+<span class="nc" id="L93">		label_calculation.setBounds(29, 24, 300, 15);</span>
+		// properties for textField
+<span class="nc" id="L95">		textField.setBounds(26, 51, 300, 29);</span>
+<span class="nc" id="L96">		textField.setColumns(10);</span>
+
+		// properties for button
+<span class="nc" id="L99">		button_0.setBounds(26, 271, 52, 25);</span>
+<span class="nc" id="L100">		button_1.setBounds(26, 234, 52, 25);</span>
+<span class="nc" id="L101">		button_2.setBounds(80, 234, 52, 25);</span>
+<span class="nc" id="L102">		button_3.setBounds(134, 234, 52, 25);</span>
+<span class="nc" id="L103">		button_4.setBounds(26, 197, 52, 25);</span>
+<span class="nc" id="L104">		button_5.setBounds(80, 197, 52, 25);</span>
+<span class="nc" id="L105">		button_6.setBounds(134, 197, 52, 25);</span>
+<span class="nc" id="L106">		button_7.setBounds(26, 158, 52, 25);</span>
+<span class="nc" id="L107">		button_8.setBounds(80, 158, 52, 25);</span>
+<span class="nc" id="L108">		button_9.setBounds(134, 158, 52, 25);</span>
+<span class="nc" id="L109">		button_come.setBounds(80, 271, 52, 25);</span>
+<span class="nc" id="L110">		Button_clean.setBounds(252, 271, 62, 25);</span>
+<span class="nc" id="L111">		Button_sqrt.setBounds(188, 103, 52, 25);</span>
+<span class="nc" id="L112">		Button_pi.setBounds(134, 103, 52, 25);</span>
+<span class="nc" id="L113">		Button_cube.setBounds(80, 103, 52, 25);</span>
+<span class="nc" id="L114">		Button_square.setBounds(26, 103, 52, 25);</span>
+<span class="nc" id="L115">		Button_xy.setBounds(252, 197, 62, 25);</span>
+<span class="nc" id="L116">		Button_percentage.setBounds(252, 158, 62, 25);</span>
+<span class="nc" id="L117">		button_addition.setBounds(188, 271, 52, 25);</span>
+<span class="nc" id="L118">		button_subtraction.setBounds(188, 234, 52, 25);</span>
+<span class="nc" id="L119">		Button_multiplication.setBounds(188, 197, 52, 25);</span>
+<span class="nc" id="L120">		Button_division.setBounds(188, 158, 52, 25);</span>
+<span class="nc" id="L121">		button_equal.setBounds(134, 271, 52, 25);</span>
+
+<span class="nc" id="L123">	}</span>
+
+	public void addComponetsToFrame() {
+<span class="nc" id="L126">		frame.getContentPane().add(textField);</span>
+<span class="nc" id="L127">		frame.getContentPane().add(button_0);</span>
+<span class="nc" id="L128">		frame.getContentPane().add(button_1);</span>
+<span class="nc" id="L129">		frame.getContentPane().add(button_2);</span>
+<span class="nc" id="L130">		frame.getContentPane().add(button_3);</span>
+<span class="nc" id="L131">		frame.getContentPane().add(button_4);</span>
+<span class="nc" id="L132">		frame.getContentPane().add(button_5);</span>
+<span class="nc" id="L133">		frame.getContentPane().add(button_6);</span>
+<span class="nc" id="L134">		frame.getContentPane().add(button_7);</span>
+<span class="nc" id="L135">		frame.getContentPane().add(button_8);</span>
+<span class="nc" id="L136">		frame.getContentPane().add(button_9);</span>
+
+<span class="nc" id="L138">		frame.getContentPane().add(button_come);</span>
+<span class="nc" id="L139">		frame.getContentPane().add(Button_clean);</span>
+<span class="nc" id="L140">		frame.getContentPane().add(Button_sqrt);</span>
+<span class="nc" id="L141">		frame.getContentPane().add(Button_pi);</span>
+<span class="nc" id="L142">		frame.getContentPane().add(Button_cube);</span>
+<span class="nc" id="L143">		frame.getContentPane().add(Button_square);</span>
+<span class="nc" id="L144">		frame.getContentPane().add(Button_xy);</span>
+<span class="nc" id="L145">		frame.getContentPane().add(Button_percentage);</span>
+<span class="nc" id="L146">		frame.getContentPane().add(button_addition);</span>
+<span class="nc" id="L147">		frame.getContentPane().add(button_subtraction);</span>
+<span class="nc" id="L148">		frame.getContentPane().add(Button_multiplication);</span>
+<span class="nc" id="L149">		frame.getContentPane().add(Button_division);</span>
+<span class="nc" id="L150">		frame.getContentPane().add(button_equal);</span>
+<span class="nc" id="L151">		frame.getContentPane().add(label_calculation);</span>
+<span class="nc" id="L152">	}</span>
+
+	public void addActionListeners() {
+<span class="nc" id="L155">		button_equal.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L157">				textInput = textField.getText();</span>
+<span class="nc" id="L158">				StringTokenizer st = new StringTokenizer(textInput, &quot; &quot;);</span>
+<span class="nc" id="L159">				resultedString = &quot;Error&quot;;</span>
+<span class="nc" id="L160">				dblNum1 = 0;</span>
+<span class="nc" id="L161">				dblNum3 = 0;</span>
+<span class="nc" id="L162">				dblObr = &quot;&quot;;</span>
+<span class="nc" id="L163">				dblObrCheck = &quot;&quot;;</span>
+<span class="nc" id="L164">				resulted = 0;</span>
+
+<span class="nc bnc" id="L166" title="All 2 branches missed.">				while (st.hasMoreTokens()) {</span>
+
+<span class="nc bnc" id="L168" title="All 2 branches missed.">					if (resulted == 0) {</span>
+<span class="nc" id="L169">						dblNum1 = Double.parseDouble(st.nextToken().trim());</span>
+					} else {
+<span class="nc" id="L171">						dblNum1 = resulted;</span>
+					}
+
+<span class="nc" id="L174">					dblObr = st.nextToken().trim();</span>
+<span class="nc" id="L175">					dblObrCheck = st.nextToken().trim();</span>
+
+					// if the user use dubbel ++ (problem)
+<span class="nc bnc" id="L178" title="All 2 branches missed.">					for (int i = 1; i &lt; 2; i++) {</span>
+<span class="nc bnc" id="L179" title="All 2 branches missed.">						if (isInteger(dblObrCheck)) {</span>
+<span class="nc" id="L180">							dblNum3 = Double.parseDouble(dblObrCheck);</span>
+						} else {
+<span class="nc" id="L182">							dblObrCheck = st.nextToken().trim();</span>
+<span class="nc" id="L183">							i = 0;</span>
+						}
+					}
+
+<span class="nc bnc" id="L187" title="All 2 branches missed.">					if (dblObr.equalsIgnoreCase(&quot;+&quot;)) {</span>
+<span class="nc" id="L188">						resulted = cbo.addition(dblNum1, dblNum3);</span>
+<span class="nc" id="L189">						resultedString = Double.toString(resulted);</span>
+<span class="nc bnc" id="L190" title="All 2 branches missed.">					} else if (dblObr.equalsIgnoreCase(&quot;-&quot;)) {</span>
+<span class="nc" id="L191">						resulted = cbo.subtraction(dblNum1, dblNum3);</span>
+<span class="nc" id="L192">						resultedString = Double.toString(resulted);</span>
+<span class="nc bnc" id="L193" title="All 2 branches missed.">					} else if (dblObr.equalsIgnoreCase(&quot;x&quot;)) {</span>
+<span class="nc" id="L194">						resulted = cbo.multiplication(dblNum1, dblNum3);</span>
+<span class="nc" id="L195">						resultedString = Double.toString(resulted);</span>
+<span class="nc bnc" id="L196" title="All 2 branches missed.">					} else if (dblObr.equalsIgnoreCase(&quot;÷&quot;)) {</span>
+<span class="nc" id="L197">						resulted = cbo.division(dblNum1, dblNum3);</span>
+<span class="nc bnc" id="L198" title="All 2 branches missed.">						if (resulted == -0.123456789) {</span>
+<span class="nc" id="L199">							resultedString = &quot;&quot;;</span>
+<span class="nc" id="L200">							textInput = &quot;&quot;;</span>
+						} else {
+<span class="nc" id="L202">							resultedString = Double.toString(resulted);</span>
+						}
+
+<span class="nc bnc" id="L205" title="All 2 branches missed.">					} else if (dblObr.equalsIgnoreCase(&quot;%&quot;)) {</span>
+<span class="nc" id="L206">						resulted = cao.percentage(dblNum1, dblNum3);</span>
+<span class="nc" id="L207">						resultedString = Double.toString(resulted);</span>
+<span class="nc bnc" id="L208" title="All 2 branches missed.">					} else if (dblObr.equalsIgnoreCase(&quot;X^Y&quot;)) {</span>
+<span class="nc" id="L209">						resulted = cao.raisedToThePowerOf(dblNum1, dblNum3);</span>
+<span class="nc" id="L210">						resultedString = Double.toString(resulted);</span>
+					}
+
+				}
+<span class="nc bnc" id="L214" title="All 2 branches missed.">				if (textInput != &quot;&quot;) {</span>
+<span class="nc" id="L215">					label_calculation.setText(textInput + &quot; = &quot; + resultedString);</span>
+				}
+<span class="nc" id="L217">				textField.setText(resultedString);</span>
+<span class="nc" id="L218">			}</span>
+		});
+<span class="nc" id="L220">		button_1.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L222">				textInput = textField.getText();</span>
+<span class="nc" id="L223">				textField.setText(textInput + &quot;1&quot;);</span>
+<span class="nc" id="L224">			}</span>
+		});
+
+<span class="nc" id="L227">		button_2.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L229">				textInput = textField.getText();</span>
+<span class="nc" id="L230">				textField.setText(textInput + &quot;2&quot;);</span>
+<span class="nc" id="L231">			}</span>
+		});
+
+<span class="nc" id="L234">		button_3.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L236">				textInput = textField.getText();</span>
+<span class="nc" id="L237">				textField.setText(textInput + &quot;3&quot;);</span>
+<span class="nc" id="L238">			}</span>
+		});
+
+<span class="nc" id="L241">		button_4.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L243">				textInput = textField.getText();</span>
+<span class="nc" id="L244">				textField.setText(textInput + &quot;4&quot;);</span>
+<span class="nc" id="L245">			}</span>
+		});
+
+<span class="nc" id="L248">		button_5.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L250">				textInput = textField.getText();</span>
+<span class="nc" id="L251">				textField.setText(textInput + &quot;5&quot;);</span>
+<span class="nc" id="L252">			}</span>
+		});
+
+<span class="nc" id="L255">		button_6.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L257">				textInput = textField.getText();</span>
+<span class="nc" id="L258">				textField.setText(textInput + &quot;6&quot;);</span>
+<span class="nc" id="L259">			}</span>
+		});
+
+<span class="nc" id="L262">		button_0.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L264">				textInput = textField.getText();</span>
+<span class="nc" id="L265">				textField.setText(textInput + &quot;0&quot;);</span>
+<span class="nc" id="L266">			}</span>
+		});
+
+<span class="nc" id="L269">		button_7.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L271">				textInput = textField.getText();</span>
+<span class="nc" id="L272">				textField.setText(textInput + &quot;7&quot;);</span>
+<span class="nc" id="L273">			}</span>
+		});
+
+<span class="nc" id="L276">		button_8.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L278">				textInput = textField.getText();</span>
+<span class="nc" id="L279">				textField.setText(textInput + &quot;8&quot;);</span>
+<span class="nc" id="L280">			}</span>
+		});
+
+<span class="nc" id="L283">		button_9.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L285">				textInput = textField.getText();</span>
+<span class="nc" id="L286">				textField.setText(textInput + &quot;9&quot;);</span>
+<span class="nc" id="L287">			}</span>
+		});
+
+<span class="nc" id="L290">		button_come.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L292">				textInput = textField.getText();</span>
+<span class="nc" id="L293">				textField.setText(textInput + &quot;.&quot;);</span>
+<span class="nc" id="L294">			}</span>
+		});
+
+<span class="nc" id="L297">		Button_division.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L299">				textInput = textField.getText();</span>
+<span class="nc" id="L300">				textField.setText(textInput + &quot; ÷ &quot;);</span>
+<span class="nc" id="L301">			}</span>
+		});
+
+<span class="nc" id="L304">		Button_multiplication.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L306">				textInput = textField.getText();</span>
+<span class="nc" id="L307">				textField.setText(textInput + &quot; x &quot;);</span>
+<span class="nc" id="L308">			}</span>
+		});
+
+<span class="nc" id="L311">		button_subtraction.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L313">				textInput = textField.getText();</span>
+<span class="nc" id="L314">				textField.setText(textInput + &quot; - &quot;);</span>
+<span class="nc" id="L315">			}</span>
+		});
+
+<span class="nc" id="L318">		button_addition.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L320">				textInput = textField.getText();</span>
+<span class="nc" id="L321">				textField.setText(textInput + &quot; + &quot;);</span>
+<span class="nc" id="L322">			}</span>
+		});
+
+<span class="nc" id="L325">		Button_percentage.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L327">				textInput = textField.getText();</span>
+<span class="nc" id="L328">				textField.setText(textInput + &quot; % &quot;);</span>
+<span class="nc" id="L329">			}</span>
+		});
+
+<span class="nc" id="L332">		Button_xy.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L334">				textInput = textField.getText();</span>
+<span class="nc" id="L335">				textField.setText(textInput + &quot; X^Y &quot;);</span>
+<span class="nc" id="L336">			}</span>
+		});
+
+<span class="nc" id="L339">		Button_square.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L341">				textInput = textField.getText();</span>
+<span class="nc" id="L342">				resulted = cao.square(Double.parseDouble(textInput));</span>
+<span class="nc" id="L343">				resultedString = Double.toString(resulted);</span>
+<span class="nc" id="L344">				label_calculation.setText(textInput + &quot; x² &quot; + resultedString);</span>
+<span class="nc" id="L345">				textField.setText(resultedString);</span>
+<span class="nc" id="L346">			}</span>
+		});
+
+<span class="nc" id="L349">		Button_cube.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L351">				textInput = textField.getText();</span>
+<span class="nc" id="L352">				resulted = cao.cube(Double.parseDouble(textInput));</span>
+<span class="nc" id="L353">				resultedString = Double.toString(resulted);</span>
+<span class="nc" id="L354">				label_calculation.setText(textInput + &quot; x³ &quot; + resultedString);</span>
+<span class="nc" id="L355">				textField.setText(resultedString);</span>
+<span class="nc" id="L356">			}</span>
+		});
+<span class="nc" id="L358">		Button_pi.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L360">				textInput = textField.getText();</span>
+<span class="nc" id="L361">				resulted = cao.pi(Double.parseDouble(textInput));</span>
+<span class="nc" id="L362">				resultedString = Double.toString(resulted);</span>
+<span class="nc" id="L363">				label_calculation.setText(textInput + &quot; π  &quot; + resultedString);</span>
+<span class="nc" id="L364">				textField.setText(resultedString);</span>
+<span class="nc" id="L365">			}</span>
+		});
+
+<span class="nc" id="L368">		Button_sqrt.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L370">				textInput = textField.getText();</span>
+<span class="nc" id="L371">				resulted = cao.sqrt(Double.parseDouble(textInput));</span>
+<span class="nc" id="L372">				resultedString = Double.toString(resulted);</span>
+<span class="nc" id="L373">				label_calculation.setText(textInput + &quot; √ &quot; + resultedString);</span>
+<span class="nc" id="L374">				textField.setText(resultedString);</span>
+<span class="nc" id="L375">			}</span>
+		});
+
+<span class="nc" id="L378">		Button_clean.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L380">				textField.setText(&quot;&quot;);</span>
+<span class="nc" id="L381">				label_calculation.setText(&quot;&quot;);</span>
+<span class="nc" id="L382">			}</span>
+		});
+<span class="nc" id="L384">	}</span>
+
+	public static boolean isInteger(String s) {
+		try {
+<span class="nc" id="L388">			Integer.parseInt(s);</span>
+<span class="nc" id="L389">		} catch (NumberFormatException e) {</span>
+<span class="nc" id="L390">			return false;</span>
+<span class="nc" id="L391">		} catch (NullPointerException e) {</span>
+<span class="nc" id="L392">			return false;</span>
+<span class="nc" id="L393">		}</span>
+		// only got here if we didn't return false
+<span class="nc" id="L395">		return true;</span>
+	}
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.7.201606060606</span></div></body></html>

@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" />  
+    <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>
+    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <br/>
+      <span class="top-banner-font-1">1 suite</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" class="collapse-all-link" title="Collapse/expand all the suites">
+          <img class="collapse-all-icon" src="collapseall.gif">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" class="navigator-link" panel-name="suite-Surefire_suite">
+              <span class="suite-name border-passed">Surefire suite</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="test-xml-Surefire_suite">
+                    <span>[unset file name]</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="testlist-Surefire_suite">
+                    <span class="test-stats">1 test</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="group-Surefire_suite">
+                    <span>0 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="times-Surefire_suite">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="reporter-Surefire_suite">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="ignored-methods-Surefire_suite">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="chronological-Surefire_suite">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">30 methods,   30 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Surefire_suite" class="hide-methods passed suite-Surefire_suite"> (hide)</a> <!-- hide-methods passed suite-Surefire_suite -->
+                      <a href="#" panel-name="suite-Surefire_suite" class="show-methods passed suite-Surefire_suite"> (show)</a> <!-- show-methods passed suite-Surefire_suite -->
+                    </span>
+                    <div class="method-list-content passed suite-Surefire_suite">
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest" hash-for-method="testCubeNegativeNumbers">testCubeNegativeNumbers</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest" hash-for-method="testCubePositiveNumbers">testCubePositiveNumbers</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest" hash-for-method="testCubeZeros">testCubeZeros</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest" hash-for-method="testPercentageNegativeNumbers">testPercentageNegativeNumbers</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest" hash-for-method="testPercentagePositiveNumbers">testPercentagePositiveNumbers</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest" hash-for-method="testPercentageZeros">testPercentageZeros</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest" hash-for-method="testPiNegativeNumbers">testPiNegativeNumbers</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest" hash-for-method="testPiPositiveNumbers">testPiPositiveNumbers</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest" hash-for-method="testPiZeros">testPiZeros</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest" hash-for-method="testRaisedToThePowerOfNegativeNumbers">testRaisedToThePowerOfNegativeNumbers</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest" hash-for-method="testRaisedToThePowerOfPositiveNumbers">testRaisedToThePowerOfPositiveNumbers</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest" hash-for-method="testRaisedToThePowerOfZeros">testRaisedToThePowerOfZeros</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest" hash-for-method="testSqrtNegativeNumbers">testSqrtNegativeNumbers</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest" hash-for-method="testSqrtPositiveNumbers">testSqrtPositiveNumbers</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest" hash-for-method="testSqrtZeros">testSqrtZeros</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest" hash-for-method="testSquareNegativeNumbers">testSquareNegativeNumbers</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest" hash-for-method="testSquarePositiveNumbers">testSquarePositiveNumbers</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest" hash-for-method="testSquareZeros">testSquareZeros</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.example.maven.calculator_niklass.CalculatorBasicOperationsTest" hash-for-method="testadditionNegativeNumbers">testadditionNegativeNumbers</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.example.maven.calculator_niklass.CalculatorBasicOperationsTest" hash-for-method="testadditionPositiveNumbers">testadditionPositiveNumbers</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.example.maven.calculator_niklass.CalculatorBasicOperationsTest" hash-for-method="testadditionZeros">testadditionZeros</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.example.maven.calculator_niklass.CalculatorBasicOperationsTest" hash-for-method="testdivisionNegativeNumbers">testdivisionNegativeNumbers</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.example.maven.calculator_niklass.CalculatorBasicOperationsTest" hash-for-method="testdivisionPositiveNumbers">testdivisionPositiveNumbers</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.example.maven.calculator_niklass.CalculatorBasicOperationsTest" hash-for-method="testdivisionZeros">testdivisionZeros</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.example.maven.calculator_niklass.CalculatorBasicOperationsTest" hash-for-method="testmultiplicationNegativeNumbers">testmultiplicationNegativeNumbers</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.example.maven.calculator_niklass.CalculatorBasicOperationsTest" hash-for-method="testmultiplicationPositiveNumbers">testmultiplicationPositiveNumbers</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.example.maven.calculator_niklass.CalculatorBasicOperationsTest" hash-for-method="testmultiplicationZeros">testmultiplicationZeros</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.example.maven.calculator_niklass.CalculatorBasicOperationsTest" hash-for-method="testsubtractionNegativeNumbers">testsubtractionNegativeNumbers</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.example.maven.calculator_niklass.CalculatorBasicOperationsTest" hash-for-method="testsubtractionPositiveNumbers">testsubtractionPositiveNumbers</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.example.maven.calculator_niklass.CalculatorBasicOperationsTest" hash-for-method="testsubtractionZeros">testsubtractionZeros</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Surefire_suite -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-Surefire_suite" class="panel Surefire_suite">
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCubeNegativeNumbers">
+                  </a> <!-- testCubeNegativeNumbers -->
+                  <span class="method-name">testCubeNegativeNumbers</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCubePositiveNumbers">
+                  </a> <!-- testCubePositiveNumbers -->
+                  <span class="method-name">testCubePositiveNumbers</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCubeZeros">
+                  </a> <!-- testCubeZeros -->
+                  <span class="method-name">testCubeZeros</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testPercentageNegativeNumbers">
+                  </a> <!-- testPercentageNegativeNumbers -->
+                  <span class="method-name">testPercentageNegativeNumbers</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testPercentagePositiveNumbers">
+                  </a> <!-- testPercentagePositiveNumbers -->
+                  <span class="method-name">testPercentagePositiveNumbers</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testPercentageZeros">
+                  </a> <!-- testPercentageZeros -->
+                  <span class="method-name">testPercentageZeros</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testPiNegativeNumbers">
+                  </a> <!-- testPiNegativeNumbers -->
+                  <span class="method-name">testPiNegativeNumbers</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testPiPositiveNumbers">
+                  </a> <!-- testPiPositiveNumbers -->
+                  <span class="method-name">testPiPositiveNumbers</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testPiZeros">
+                  </a> <!-- testPiZeros -->
+                  <span class="method-name">testPiZeros</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testRaisedToThePowerOfNegativeNumbers">
+                  </a> <!-- testRaisedToThePowerOfNegativeNumbers -->
+                  <span class="method-name">testRaisedToThePowerOfNegativeNumbers</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testRaisedToThePowerOfPositiveNumbers">
+                  </a> <!-- testRaisedToThePowerOfPositiveNumbers -->
+                  <span class="method-name">testRaisedToThePowerOfPositiveNumbers</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testRaisedToThePowerOfZeros">
+                  </a> <!-- testRaisedToThePowerOfZeros -->
+                  <span class="method-name">testRaisedToThePowerOfZeros</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testSqrtNegativeNumbers">
+                  </a> <!-- testSqrtNegativeNumbers -->
+                  <span class="method-name">testSqrtNegativeNumbers</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testSqrtPositiveNumbers">
+                  </a> <!-- testSqrtPositiveNumbers -->
+                  <span class="method-name">testSqrtPositiveNumbers</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testSqrtZeros">
+                  </a> <!-- testSqrtZeros -->
+                  <span class="method-name">testSqrtZeros</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testSquareNegativeNumbers">
+                  </a> <!-- testSquareNegativeNumbers -->
+                  <span class="method-name">testSquareNegativeNumbers</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testSquarePositiveNumbers">
+                  </a> <!-- testSquarePositiveNumbers -->
+                  <span class="method-name">testSquarePositiveNumbers</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testSquareZeros">
+                  </a> <!-- testSquareZeros -->
+                  <span class="method-name">testSquareZeros</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.example.maven.calculator_niklass.CalculatorBasicOperationsTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testadditionNegativeNumbers">
+                  </a> <!-- testadditionNegativeNumbers -->
+                  <span class="method-name">testadditionNegativeNumbers</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testadditionPositiveNumbers">
+                  </a> <!-- testadditionPositiveNumbers -->
+                  <span class="method-name">testadditionPositiveNumbers</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testadditionZeros">
+                  </a> <!-- testadditionZeros -->
+                  <span class="method-name">testadditionZeros</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testdivisionNegativeNumbers">
+                  </a> <!-- testdivisionNegativeNumbers -->
+                  <span class="method-name">testdivisionNegativeNumbers</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testdivisionPositiveNumbers">
+                  </a> <!-- testdivisionPositiveNumbers -->
+                  <span class="method-name">testdivisionPositiveNumbers</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testdivisionZeros">
+                  </a> <!-- testdivisionZeros -->
+                  <span class="method-name">testdivisionZeros</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testmultiplicationNegativeNumbers">
+                  </a> <!-- testmultiplicationNegativeNumbers -->
+                  <span class="method-name">testmultiplicationNegativeNumbers</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testmultiplicationPositiveNumbers">
+                  </a> <!-- testmultiplicationPositiveNumbers -->
+                  <span class="method-name">testmultiplicationPositiveNumbers</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testmultiplicationZeros">
+                  </a> <!-- testmultiplicationZeros -->
+                  <span class="method-name">testmultiplicationZeros</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testsubtractionNegativeNumbers">
+                  </a> <!-- testsubtractionNegativeNumbers -->
+                  <span class="method-name">testsubtractionNegativeNumbers</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testsubtractionPositiveNumbers">
+                  </a> <!-- testsubtractionPositiveNumbers -->
+                  <span class="method-name">testsubtractionPositiveNumbers</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testsubtractionZeros">
+                  </a> <!-- testsubtractionZeros -->
+                  <span class="method-name">testsubtractionZeros</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+        </div> <!-- panel Surefire_suite -->
+        <div panel-name="test-xml-Surefire_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite thread-count=&quot;1&quot; verbose=&quot;0&quot; name=&quot;Surefire suite&quot; junit=&quot;true&quot;&gt;
+  &lt;test name=&quot;Surefire test&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.example.maven.calculator_niklass.CalculatorBasicOperationsTest&quot;/&gt;
+      &lt;class name=&quot;com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Surefire test --&gt;
+&lt;/suite&gt; &lt;!-- Surefire suite --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-Surefire_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for Surefire suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">Surefire test (2 classes)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-Surefire_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for Surefire suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-Surefire_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for Surefire suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_Surefire_suite');
+function tableData_Surefire_suite() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(30);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'testPiPositiveNumbers')
+data.setCell(0, 2, 'com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest')
+data.setCell(0, 3, 192);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'testPercentageZeros')
+data.setCell(1, 2, 'com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest')
+data.setCell(1, 3, 157);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'testPercentageNegativeNumbers')
+data.setCell(2, 2, 'com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest')
+data.setCell(2, 3, 148);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'testSquarePositiveNumbers')
+data.setCell(3, 2, 'com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest')
+data.setCell(3, 3, 129);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'testRaisedToThePowerOfNegativeNumbers')
+data.setCell(4, 2, 'com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest')
+data.setCell(4, 3, 90);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'testPiNegativeNumbers')
+data.setCell(5, 2, 'com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest')
+data.setCell(5, 3, 75);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'testdivisionZeros')
+data.setCell(6, 2, 'com.example.maven.calculator_niklass.CalculatorBasicOperationsTest')
+data.setCell(6, 3, 72);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'testSquareNegativeNumbers')
+data.setCell(7, 2, 'com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest')
+data.setCell(7, 3, 70);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'testPercentagePositiveNumbers')
+data.setCell(8, 2, 'com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest')
+data.setCell(8, 3, 53);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'testadditionZeros')
+data.setCell(9, 2, 'com.example.maven.calculator_niklass.CalculatorBasicOperationsTest')
+data.setCell(9, 3, 51);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'testmultiplicationZeros')
+data.setCell(10, 2, 'com.example.maven.calculator_niklass.CalculatorBasicOperationsTest')
+data.setCell(10, 3, 48);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'testCubeNegativeNumbers')
+data.setCell(11, 2, 'com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest')
+data.setCell(11, 3, 41);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'testdivisionPositiveNumbers')
+data.setCell(12, 2, 'com.example.maven.calculator_niklass.CalculatorBasicOperationsTest')
+data.setCell(12, 3, 40);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'testSqrtPositiveNumbers')
+data.setCell(13, 2, 'com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest')
+data.setCell(13, 3, 39);
+data.setCell(14, 0, 14)
+data.setCell(14, 1, 'testRaisedToThePowerOfPositiveNumbers')
+data.setCell(14, 2, 'com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest')
+data.setCell(14, 3, 33);
+data.setCell(15, 0, 15)
+data.setCell(15, 1, 'testCubePositiveNumbers')
+data.setCell(15, 2, 'com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest')
+data.setCell(15, 3, 31);
+data.setCell(16, 0, 16)
+data.setCell(16, 1, 'testsubtractionZeros')
+data.setCell(16, 2, 'com.example.maven.calculator_niklass.CalculatorBasicOperationsTest')
+data.setCell(16, 3, 28);
+data.setCell(17, 0, 17)
+data.setCell(17, 1, 'testadditionPositiveNumbers')
+data.setCell(17, 2, 'com.example.maven.calculator_niklass.CalculatorBasicOperationsTest')
+data.setCell(17, 3, 28);
+data.setCell(18, 0, 18)
+data.setCell(18, 1, 'testsubtractionNegativeNumbers')
+data.setCell(18, 2, 'com.example.maven.calculator_niklass.CalculatorBasicOperationsTest')
+data.setCell(18, 3, 27);
+data.setCell(19, 0, 19)
+data.setCell(19, 1, 'testmultiplicationPositiveNumbers')
+data.setCell(19, 2, 'com.example.maven.calculator_niklass.CalculatorBasicOperationsTest')
+data.setCell(19, 3, 27);
+data.setCell(20, 0, 20)
+data.setCell(20, 1, 'testdivisionNegativeNumbers')
+data.setCell(20, 2, 'com.example.maven.calculator_niklass.CalculatorBasicOperationsTest')
+data.setCell(20, 3, 27);
+data.setCell(21, 0, 21)
+data.setCell(21, 1, 'testmultiplicationNegativeNumbers')
+data.setCell(21, 2, 'com.example.maven.calculator_niklass.CalculatorBasicOperationsTest')
+data.setCell(21, 3, 25);
+data.setCell(22, 0, 22)
+data.setCell(22, 1, 'testSqrtNegativeNumbers')
+data.setCell(22, 2, 'com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest')
+data.setCell(22, 3, 23);
+data.setCell(23, 0, 23)
+data.setCell(23, 1, 'testadditionNegativeNumbers')
+data.setCell(23, 2, 'com.example.maven.calculator_niklass.CalculatorBasicOperationsTest')
+data.setCell(23, 3, 16);
+data.setCell(24, 0, 24)
+data.setCell(24, 1, 'testsubtractionPositiveNumbers')
+data.setCell(24, 2, 'com.example.maven.calculator_niklass.CalculatorBasicOperationsTest')
+data.setCell(24, 3, 14);
+data.setCell(25, 0, 25)
+data.setCell(25, 1, 'testCubeZeros')
+data.setCell(25, 2, 'com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest')
+data.setCell(25, 3, 7);
+data.setCell(26, 0, 26)
+data.setCell(26, 1, 'testRaisedToThePowerOfZeros')
+data.setCell(26, 2, 'com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest')
+data.setCell(26, 3, 1);
+data.setCell(27, 0, 27)
+data.setCell(27, 1, 'testSqrtZeros')
+data.setCell(27, 2, 'com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest')
+data.setCell(27, 3, 1);
+data.setCell(28, 0, 28)
+data.setCell(28, 1, 'testPiZeros')
+data.setCell(28, 2, 'com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest')
+data.setCell(28, 3, 0);
+data.setCell(29, 0, 29)
+data.setCell(29, 1, 'testSquareZeros')
+data.setCell(29, 2, 'com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest')
+data.setCell(29, 3, 0);
+window.suiteTableData['Surefire_suite']= { tableData: data, tableDiv: 'times-div-Surefire_suite'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 1 seconds</span>
+              <div id="times-div-Surefire_suite">
+              </div> <!-- times-div-Surefire_suite -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-Surefire_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for Surefire suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-Surefire_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">0 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-Surefire_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.example.maven.calculator_niklass.CalculatorAdvancedOperationsTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">testPiPositiveNumbers</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testSquarePositiveNumbers</span>
+                <span class="method-start">203 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testPiNegativeNumbers</span>
+                <span class="method-start">335 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testSquareNegativeNumbers</span>
+                <span class="method-start">417 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testPiZeros</span>
+                <span class="method-start">497 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testPercentageZeros</span>
+                <span class="method-start">498 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testCubeZeros</span>
+                <span class="method-start">662 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testSquareZeros</span>
+                <span class="method-start">675 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testPercentagePositiveNumbers</span>
+                <span class="method-start">675 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testSqrtZeros</span>
+                <span class="method-start">728 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testPercentageNegativeNumbers</span>
+                <span class="method-start">729 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testRaisedToThePowerOfZeros</span>
+                <span class="method-start">877 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testCubePositiveNumbers</span>
+                <span class="method-start">878 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testSqrtPositiveNumbers</span>
+                <span class="method-start">909 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testCubeNegativeNumbers</span>
+                <span class="method-start">949 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testSqrtNegativeNumbers</span>
+                <span class="method-start">992 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testRaisedToThePowerOfPositiveNumbers</span>
+                <span class="method-start">1015 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testRaisedToThePowerOfNegativeNumbers</span>
+                <span class="method-start">1049 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.example.maven.calculator_niklass.CalculatorBasicOperationsTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">testmultiplicationPositiveNumbers</span>
+                <span class="method-start">1156 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testsubtractionZeros</span>
+                <span class="method-start">1183 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testmultiplicationNegativeNumbers</span>
+                <span class="method-start">1211 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testadditionPositiveNumbers</span>
+                <span class="method-start">1251 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testadditionNegativeNumbers</span>
+                <span class="method-start">1280 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testmultiplicationZeros</span>
+                <span class="method-start">1296 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testsubtractionPositiveNumbers</span>
+                <span class="method-start">1344 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testdivisionZeros</span>
+                <span class="method-start">1358 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testsubtractionNegativeNumbers</span>
+                <span class="method-start">1431 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testdivisionPositiveNumbers</span>
+                <span class="method-start">1459 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testdivisionNegativeNumbers</span>
+                <span class="method-start">1500 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testadditionZeros</span>
+                <span class="method-start">1528 ms</span>
+              </div> <!-- test-method -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+</html>
