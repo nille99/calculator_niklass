@@ -17,42 +17,12 @@ public class CalculatorBasicOperationsTest {
 	Random random = new Random();
 	DecimalFormat df = new DecimalFormat();
 
-	@Test
-	public void testadditionSmallSizedPositiveNumbers() {
-		double firstNumber = 0;
-		double secondNumber = 0;
-		double result = 0;
-
-		for (int i = 0; i < 50; i++) {
-			firstNumber = Double.valueOf(df.format(random.nextDouble() * 10));
-			secondNumber = Double.valueOf(df.format(random.nextDouble() * 10));
-			result = firstNumber + secondNumber;
-
-			LOG.info("Testing the method addition with: " + firstNumber + " and " + secondNumber);
-			assertEquals(Math.round(calculator.addition(firstNumber, secondNumber)), Math.round(result), 1);
-
-		}
-	}
+	// -----------------------
+	// Test case for addition
+	// -----------------------
 
 	@Test
-	public void testadditionMediumSizedPositiveNumbers() {
-		double firstNumber = 0;
-		double secondNumber = 0;
-		double result = 0;
-
-		for (int i = 0; i < 50; i++) {
-			firstNumber = Double.valueOf(df.format(random.nextDouble() * 100));
-			secondNumber = Double.valueOf(df.format(random.nextDouble() * 100));
-			result = firstNumber + secondNumber;
-
-			LOG.info("Testing the method addition with: " + firstNumber + " and " + secondNumber);
-			assertEquals(Math.round(calculator.addition(firstNumber, secondNumber)), Math.round(result), 1);
-
-		}
-	}
-
-	@Test
-	public void testadditionLargeSizedPositiveNumbers() {
+	public void testadditionPositiveNumbers() {
 		double firstNumber = 0;
 		double secondNumber = 0;
 		double result = 0;
@@ -99,41 +69,7 @@ public class CalculatorBasicOperationsTest {
 	}
 
 	@Test
-	public void testadditionSmallSizedNegativeNumbers() {
-		double firstNumber = 0;
-		double secondNumber = 0;
-		double result = 0;
-
-		for (int i = 0; i < 50; i++) {
-			firstNumber = Double.valueOf(df.format(-random.nextDouble() * 10));
-			secondNumber = Double.valueOf(df.format(-random.nextDouble() * 10));
-			result = firstNumber + secondNumber;
-
-			LOG.info("Testing the method addition with: " + firstNumber + " and " + secondNumber);
-			assertEquals(Math.round(calculator.addition(firstNumber, secondNumber)), Math.round(result), 1);
-
-		}
-	}
-
-	@Test
-	public void testadditionMediumSizedNegativeNumbers() {
-		double firstNumber = 0;
-		double secondNumber = 0;
-		double result = 0;
-
-		for (int i = 0; i < 50; i++) {
-			firstNumber = Double.valueOf(df.format(-random.nextDouble() * 100));
-			secondNumber = Double.valueOf(df.format(-random.nextDouble() * 100));
-			result = firstNumber + secondNumber;
-
-			LOG.info("Testing the method addition with: " + firstNumber + " and " + secondNumber);
-			assertEquals(Math.round(calculator.addition(firstNumber, secondNumber)), Math.round(result), 1);
-
-		}
-	}
-
-	@Test
-	public void testadditionLargeSizedNegativeNumbers() {
+	public void testadditionNegativeNumbers() {
 		double firstNumber = 0;
 		double secondNumber = 0;
 		double result = 0;
@@ -150,42 +86,11 @@ public class CalculatorBasicOperationsTest {
 	}
 
 	// -----------------------
-	@Test
-	public void testsubtractionSmallSizedPositiveNumbers() {
-		double firstNumber = 0;
-		double secondNumber = 0;
-		double result = 0;
-
-		for (int i = 0; i < 50; i++) {
-			firstNumber = Double.valueOf(df.format(random.nextDouble() * 10));
-			secondNumber = Double.valueOf(df.format(random.nextDouble() * 10));
-			result = firstNumber - secondNumber;
-
-			LOG.info("Testing the method subtraction with: " + firstNumber + " and " + secondNumber);
-			assertEquals(Math.round(calculator.subtraction(firstNumber, secondNumber)), Math.round(result), 1);
-
-		}
-	}
+	// Test case for subtraction
+	// -----------------------
 
 	@Test
-	public void testsubtractionMediumSizedPositiveNumbers() {
-		double firstNumber = 0;
-		double secondNumber = 0;
-		double result = 0;
-
-		for (int i = 0; i < 50; i++) {
-			firstNumber = Double.valueOf(df.format(random.nextDouble() * 100));
-			secondNumber = Double.valueOf(df.format(random.nextDouble() * 100));
-			result = firstNumber - secondNumber;
-
-			LOG.info("Testing the method subtraction with: " + firstNumber + " and " + secondNumber);
-			assertEquals(Math.round(calculator.subtraction(firstNumber, secondNumber)), Math.round(result), 1);
-
-		}
-	}
-
-	@Test
-	public void testsubtractionLargeSizedPositiveNumbers() {
+	public void testsubtractionPositiveNumbers() {
 		double firstNumber = 0;
 		double secondNumber = 0;
 		double result = 0;
@@ -232,41 +137,7 @@ public class CalculatorBasicOperationsTest {
 	}
 
 	@Test
-	public void testsubtractionSmallSizedNegativeNumbers() {
-		double firstNumber = 0;
-		double secondNumber = 0;
-		double result = 0;
-
-		for (int i = 0; i < 50; i++) {
-			firstNumber = Double.valueOf(df.format(-random.nextDouble() * 10));
-			secondNumber = Double.valueOf(df.format(-random.nextDouble() * 10));
-			result = firstNumber - secondNumber;
-
-			LOG.info("Testing the method subtraction with: " + firstNumber + " and " + secondNumber);
-			assertEquals(Math.round(calculator.subtraction(firstNumber, secondNumber)), Math.round(result), 1);
-
-		}
-	}
-
-	@Test
-	public void testsubtractionMediumSizedNegativeNumbers() {
-		double firstNumber = 0;
-		double secondNumber = 0;
-		double result = 0;
-
-		for (int i = 0; i < 50; i++) {
-			firstNumber = Double.valueOf(df.format(-random.nextDouble() * 100));
-			secondNumber = Double.valueOf(df.format(-random.nextDouble() * 100));
-			result = firstNumber - secondNumber;
-
-			LOG.info("Testing the method subtraction with: " + firstNumber + " and " + secondNumber);
-			assertEquals(Math.round(calculator.subtraction(firstNumber, secondNumber)), Math.round(result), 1);
-
-		}
-	}
-
-	@Test
-	public void testsubtractionLargeSizedNegativeNumbers() {
+	public void testsubtractionNegativeNumbers() {
 		double firstNumber = 0;
 		double secondNumber = 0;
 		double result = 0;
@@ -283,42 +154,11 @@ public class CalculatorBasicOperationsTest {
 	}
 
 	// -----------------------
-	@Test
-	public void testmultiplicationSmallSizedPositiveNumbers() {
-		double firstNumber = 0;
-		double secondNumber = 0;
-		double result = 0;
-
-		for (int i = 0; i < 50; i++) {
-			firstNumber = Double.valueOf(df.format(random.nextDouble() * 10));
-			secondNumber = Double.valueOf(df.format(random.nextDouble() * 10));
-			result = firstNumber * secondNumber;
-
-			LOG.info("Testing the method multiplication with: " + firstNumber + " and " + secondNumber);
-			assertEquals(Math.round(calculator.multiplication(firstNumber, secondNumber)), Math.round(result), 1);
-
-		}
-	}
+	// Test case for multiplication
+	// -----------------------
 
 	@Test
-	public void testmultiplicationMediumSizedPositiveNumbers() {
-		double firstNumber = 0;
-		double secondNumber = 0;
-		double result = 0;
-
-		for (int i = 0; i < 50; i++) {
-			firstNumber = Double.valueOf(df.format(random.nextDouble() * 100));
-			secondNumber = Double.valueOf(df.format(random.nextDouble() * 100));
-			result = firstNumber * secondNumber;
-
-			LOG.info("Testing the method multiplication with: " + firstNumber + " and " + secondNumber);
-			assertEquals(Math.round(calculator.multiplication(firstNumber, secondNumber)), Math.round(result), 1);
-
-		}
-	}
-
-	@Test
-	public void testmultiplicationLargeSizedPositiveNumbers() {
+	public void testmultiplicationPositiveNumbers() {
 		double firstNumber = 0;
 		double secondNumber = 0;
 		double result = 0;
@@ -365,41 +205,7 @@ public class CalculatorBasicOperationsTest {
 	}
 
 	@Test
-	public void testmultiplicationSmallSizedNegativeNumbers() {
-		double firstNumber = 0;
-		double secondNumber = 0;
-		double result = 0;
-
-		for (int i = 0; i < 50; i++) {
-			firstNumber = Double.valueOf(df.format(-random.nextDouble() * 10));
-			secondNumber = Double.valueOf(df.format(-random.nextDouble() * 10));
-			result = firstNumber * secondNumber;
-
-			LOG.info("Testing the method multiplication with: " + firstNumber + " and " + secondNumber);
-			assertEquals(Math.round(calculator.multiplication(firstNumber, secondNumber)), Math.round(result), 1);
-
-		}
-	}
-
-	@Test
-	public void testmultiplicationMediumSizedNegativeNumbers() {
-		double firstNumber = 0;
-		double secondNumber = 0;
-		double result = 0;
-
-		for (int i = 0; i < 50; i++) {
-			firstNumber = Double.valueOf(df.format(-random.nextDouble() * 100));
-			secondNumber = Double.valueOf(df.format(-random.nextDouble() * 100));
-			result = firstNumber * secondNumber;
-
-			LOG.info("Testing the method multiplication with: " + firstNumber + " and " + secondNumber);
-			assertEquals(Math.round(calculator.multiplication(firstNumber, secondNumber)), Math.round(result), 1);
-
-		}
-	}
-
-	@Test
-	public void testmultiplicationLargeSizedNegativeNumbers() {
+	public void testmultiplicationNegativeNumbers() {
 		double firstNumber = 0;
 		double secondNumber = 0;
 		double result = 0;
@@ -416,42 +222,11 @@ public class CalculatorBasicOperationsTest {
 	}
 
 	// -----------------------
-	@Test
-	public void testdivisionSmallSizedPositiveNumbers() {
-		double firstNumber = 0;
-		double secondNumber = 0;
-		double result = 0;
-
-		for (int i = 0; i < 50; i++) {
-			firstNumber = Double.valueOf(df.format(random.nextDouble() * 10));
-			secondNumber = Double.valueOf(df.format(random.nextDouble() * 10));
-			result = firstNumber / secondNumber;
-
-			LOG.info("Testing the method division with: " + firstNumber + " and " + secondNumber);
-			assertEquals(Math.round(calculator.division(firstNumber, secondNumber)), Math.round(result), 1);
-
-		}
-	}
+	// Test case for division
+	// -----------------------
 
 	@Test
-	public void testdivisionMediumSizedPositiveNumbers() {
-		double firstNumber = 0;
-		double secondNumber = 0;
-		double result = 0;
-
-		for (int i = 0; i < 50; i++) {
-			firstNumber = Double.valueOf(df.format(random.nextDouble() * 100));
-			secondNumber = Double.valueOf(df.format(random.nextDouble() * 100));
-			result = firstNumber / secondNumber;
-
-			LOG.info("Testing the method division with: " + firstNumber + " and " + secondNumber);
-			assertEquals(Math.round(calculator.division(firstNumber, secondNumber)), Math.round(result), 1);
-
-		}
-	}
-
-	@Test
-	public void testdivisionLargeSizedPositiveNumbers() {
+	public void testdivisionPositiveNumbers() {
 		double firstNumber = 0;
 		double secondNumber = 0;
 		double result = 0;
@@ -477,8 +252,16 @@ public class CalculatorBasicOperationsTest {
 		LOG.info("Testing the method division with: " + firstNumber + " and " + secondNumber);
 		assertEquals(Math.round(calculator.multiplication(firstNumber, secondNumber)), Math.round(result), 1);
 
-		// Testing the case random / 0
+		// Testing the case 0 / 0
 		for (int i = 0; i < 50; i++) {
+			firstNumber = 0;
+			secondNumber = 0;
+			result = -0.123456789;
+
+			LOG.info("Testing the method division with: " + firstNumber + " and " + secondNumber);
+			assertEquals(Math.round(calculator.division(firstNumber, secondNumber)), Math.round(result), 1);
+
+			// Testing the case random / 0
 			firstNumber = Double.valueOf(df.format(random.nextDouble() * 1000));
 			secondNumber = 0;
 			result = -0.123456789;
@@ -499,41 +282,7 @@ public class CalculatorBasicOperationsTest {
 	}
 
 	@Test
-	public void testdivisionSmallSizedNegativeNumbers() {
-		double firstNumber = 0;
-		double secondNumber = 0;
-		double result = 0;
-
-		for (int i = 0; i < 50; i++) {
-			firstNumber = Double.valueOf(df.format(-random.nextDouble() * 10));
-			secondNumber = Double.valueOf(df.format(-random.nextDouble() * 10));
-			result = firstNumber / secondNumber;
-
-			LOG.info("Testing the method division with: " + firstNumber + " and " + secondNumber);
-			assertEquals(Math.round(calculator.division(firstNumber, secondNumber)), Math.round(result), 1);
-
-		}
-	}
-
-	@Test
-	public void testdivisionMediumSizedNegativeNumbers() {
-		double firstNumber = 0;
-		double secondNumber = 0;
-		double result = 0;
-
-		for (int i = 0; i < 50; i++) {
-			firstNumber = Double.valueOf(df.format(-random.nextDouble() * 100));
-			secondNumber = Double.valueOf(df.format(-random.nextDouble() * 100));
-			result = firstNumber / secondNumber;
-
-			LOG.info("Testing the method division with: " + firstNumber + " and " + secondNumber);
-			assertEquals(Math.round(calculator.division(firstNumber, secondNumber)), Math.round(result), 1);
-
-		}
-	}
-
-	@Test
-	public void testdivisionLargeSizedNegativeNumbers() {
+	public void testdivisionNegativeNumbers() {
 		double firstNumber = 0;
 		double secondNumber = 0;
 		double result = 0;

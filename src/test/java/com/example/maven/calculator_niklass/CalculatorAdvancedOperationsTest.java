@@ -17,6 +17,10 @@ public class CalculatorAdvancedOperationsTest {
 	Random random = new Random();
 	DecimalFormat df = new DecimalFormat();
 
+	// -----------------------
+	// Test case for Square
+	// -----------------------
+
 	@Test
 	public void testSquarePositiveNumbers() {
 		double firstNumber = 0;
@@ -56,7 +60,9 @@ public class CalculatorAdvancedOperationsTest {
 		}
 	}
 
-	/// ---------------
+	// -----------------------
+	// Test case for Cube
+	// -----------------------
 
 	@Test
 	public void testCubePositiveNumbers() {
@@ -95,7 +101,9 @@ public class CalculatorAdvancedOperationsTest {
 			assertEquals(Math.round(calculator.cube(firstNumber)), Math.round(result), 1);
 		}
 	}
-	/// ---------------
+	// -----------------------
+	// Test case for Percentage
+	// -----------------------
 
 	@Test
 	public void testPercentagePositiveNumbers() {
@@ -185,7 +193,10 @@ public class CalculatorAdvancedOperationsTest {
 
 	}
 
-	// --------------
+	// -----------------------
+	// Test case for Pi
+	// -----------------------
+
 	@Test
 	public void testPiPositiveNumbers() {
 		double firstNumber = 0;
@@ -224,7 +235,9 @@ public class CalculatorAdvancedOperationsTest {
 		}
 	}
 
-	// --------------
+	// -----------------------
+	// Test case for s q r t-method
+	// -----------------------
 	@Test
 	public void testSqrtPositiveNumbers() {
 		double firstNumber = 0;
@@ -263,7 +276,9 @@ public class CalculatorAdvancedOperationsTest {
 		}
 	}
 
-	// --------------
+	// -----------------------
+	// Test case for ToThePowerOf
+	// -----------------------
 	@Test
 	public void testRaisedToThePowerOfPositiveNumbers() {
 		double base = 0;
