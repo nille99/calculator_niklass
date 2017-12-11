@@ -29,6 +29,7 @@ public class MainFrame {
 	private JFrame frame = new JFrame();
 	private JTextField textField = new JTextField();
 
+	// private JButton Button;
 	private JButton button_1 = new JButton("1");
 	private JButton button_2 = new JButton("2");
 	private JButton button_3 = new JButton("3");
