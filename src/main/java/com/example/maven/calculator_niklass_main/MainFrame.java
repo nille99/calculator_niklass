@@ -1,3 +1,13 @@
+/***
+ * Assignment calculator MainFrame
+ * 
+ * @author Niklas
+ * @version 1.0
+ * 
+ * <h1>The calculator_ system</h1>
+ * This is a GUI
+ *
+ */
 package com.example.maven.calculator_niklass_main;
 
 import javax.swing.JFrame;
